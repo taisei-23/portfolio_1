@@ -90,3 +90,38 @@
 ・天候に関しては、Visual Crossing"https://www.visualcrossing.com/weather-api/"を利用し、15日先までの気象情報を取得します
 
 ・渋滞情報はGoogle Maps Directions APIと国交省オープンデータを併用することでアプリの経路上に表示予定
+
+■ 基本機能(CRUD)
+    ■ユーザー登録
+        ・メール
+        ・パスワード
+        ・ユーザー名
+    ■ログイン機能
+        ・登録済みユーザーのログイン
+    ■ポスト機能
+        ■雪山への感想ポスト
+            ・画像添付
+            ・文章投稿
+        ■一覧表示
+            ・ポスト一覧の閲覧
+        ■コメント機能
+            ・投稿
+            ・削除
+            ・編集
+            ・一覧表示
+        ■削除
+        ■編集
+        ■ブックマーク機能
+            ・ブックマーク
+            ・削除
+        ■いいね機能
+            ・いいね機能
+            ・いいね削除
+    ■プロフィール
+        ■アイコン機能
+            ・画像登録
+            ・画像変更
+            ・画像削除
+
+■ figma URL
+    https://www.figma.com/design/t56CrD1boVcNyA4peHKHul/%E7%84%A1%E9%A1%8C?node-id=0-1&p=f&t=LxKVBEkagAdqa0xl-0
