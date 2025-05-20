@@ -125,3 +125,6 @@
 
 ■ figma URL
     https://www.figma.com/design/t56CrD1boVcNyA4peHKHul/%E7%84%A1%E9%A1%8C?node-id=0-1&p=f&t=LxKVBEkagAdqa0xl-0
+
+■ draw.io URL
+    https://app.diagrams.net/#G1f6SaseZ-JBj0s4P3zDpypXEUm0EaP5ty#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
