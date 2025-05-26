@@ -128,3 +128,6 @@
 
 ■ draw.io URL
     https://app.diagrams.net/#G1f6SaseZ-JBj0s4P3zDpypXEUm0EaP5ty#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
+
+■ issue URL
+    https://github.com/users/taisei-23/projects/3/views/1
