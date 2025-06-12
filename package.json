@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.17.19",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  },
+  "packageManager": "yarn@1.22.22",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2"
+  }
+}
