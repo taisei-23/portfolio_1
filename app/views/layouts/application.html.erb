@@ -16,15 +16,15 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col h-screen">
     <%= render "shared/header" %>
 
-    <div class="flex flex-justify-between">
+    <div class="flex flex-1 overflow-hidden">
       <% if user_signed_in? %>
-        <%= render "shared/sidebar" %>
+       <%= render "shared/sidebar" %>
       <% end %>
 
-      <main>
+      <main class="flex-1 overflow-y-auto p-6 bg-white">
         <%= yield %>
       </main>
     </div>
