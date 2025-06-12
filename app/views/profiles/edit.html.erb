@@ -1,0 +1,31 @@
+<h2 class="text-xl font-bold mb-4">プロフィール</h2>
+
+<div class="mb-6">
+
+  <% if @user.icon_image.attached? %>
+    <div>
+      <p><%= image_tag @user.icon_image.variant(resize_to_limit: [150, 150])%>
+      <strong><%= @user.name %></strong>
+      </p>
+    </div>
+  <% else %>
+    <p>アイコン未設定 <strong><%= @user.name %></strong></p>
+
+  <% end %>
+</div>
+
+<%= form_with model: @user, url: profile_path, method: :patch, local: true, multipart: true do |f| %>
+  <div class="mb-4">
+    <%= f.label :name, "新しいユーザー名" %><br>
+    <%= f.text_field :name, class: "border rounded w-full p-2" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :icon_image, "新しいプロフィール画像" %><br>
+    <%= f.file_field :icon_image, class: "border rounded w-full" %>
+  </div>
+
+  <div class="text-right">
+    <%= f.submit "更新"%>
+  </div>
+<% end %>

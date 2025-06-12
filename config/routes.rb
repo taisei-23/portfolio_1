@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root to: "posts#index"
   resources :posts, only: [:index]
+  resource :profile, only: [:edit, :update, :show]
 end

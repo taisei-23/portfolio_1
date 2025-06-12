@@ -1,16 +1,17 @@
 <div class="w-64 bg-orange-300 text-black h-full px-4 py-6 flex flex-col">
-  <div class="mb-6">
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <div class="mb-6">
       <div class="flex items-center mb-3">
+        <%= image_tag current_user.icon_image.variant(resize_to_limit: [40, 40]), class: "rounded-full mr-2" %>
         <span class="font-semibold"><%= current_user.name %></span>
       </div>
       <nav class="space-y-3">
         <%= link_to "・掲示板一覧", posts_path, class: "block hover:text-blue-600" %>
         <%#= link_to "・雪山検索", search_mountains_path, class: "block hover:text-blue-600" %>
         <%#= link_to "・周辺施設検索", nearby_facilities_path, class: "block hover:text-blue-600" %>
-        <%#= link_to "・プロフィール", profile_path(current_user), class: "block hover:text-blue-600" %>
+        <%= link_to "・プロフィール", edit_profile_path, class: "block hover:text-blue-600" %>
         <%= link_to "・ログアウト", destroy_user_session_path, method: :delete, class: "block text-red-600 hover:text-red-800" %>
       </nav>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
