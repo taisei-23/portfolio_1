@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "App" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <%= render "shared/header" %>
+
+    <div class="flex flex-justify-between">
+      <% if user_signed_in? %>
+        <%= render "shared/sidebar" %>
+      <% end %>
+
+      <main>
+        <%= yield %>
+      </main>
+    </div>
+
+    <%= render "shared/footer" %>
+  </body>
+</html>
