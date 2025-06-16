@@ -1,0 +1,21 @@
+<div class="border rounded p-4 mb-4 shadow-sm">
+  <div class="flex itemscenter mb-2">
+    <%= image_tag post.user.icon_image.variant(resize_to_limit: [40, 40]), class: "rounded-full mr-2" %>
+    <span class="font-semibold"><%= post.user.name %></span>
+    <span class="text-gray-500 text-sm ml-2"><%= post.created_at.strftime("%Y/%m/%d %H:%M") %></span>
+  </div>
+  <h2 class="text-lg font-bold mb-2"><%= post.title %></h2>
+  <p class="mb-2"><%= post.body %></p>
+  <% if post.image.attached? %>
+    <div class="mb-2">
+      <%= image_tag post.image.variant(resize_to_limit: [600, nil]), class: "w-full h-auto rounded" %>
+    </div>
+  <% end %>
+  <div class="flex justify-end">
+    <% if user_signed_in? && post.user == current_user %>
+      <%= link_to '編集', edit_post_path(post), class: "bg-yellow-500 text-white py-1 px-3 rounded mr-2" %>
+      <%= link_to '削除', post, method: :delete, data: { confirm: '本当に削除しますか？' }, class: "bg-red-500 text-white py-1 px-3 rounded" %>
+    <% end %>
+  </div>
+</div>
+

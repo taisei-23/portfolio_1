@@ -6,7 +6,15 @@
         <span class="font-semibold"><%= current_user.name %></span>
       </div>
       <nav class="space-y-3">
-        <%= link_to "・掲示板一覧", posts_path, class: "block hover:text-blue-600" %>
+        <button onclick="document.getElementById('posts-submenu').classList.toggle('hidden')" class="block hover:text-blue-600">
+          ・掲示板
+        </button>
+        <div id="posts-submenu" class="ml-4 space-y-2 hidden text-center">
+          <%= link_to "掲示板一覧", posts_path, class: "block hover:text-blue-600" %>
+          <%= link_to "掲示板作成", new_post_path, class: "block hover:text-blue-600" %>
+          <%#= link_to "ブックマークリスト", bookmarks_path, class: "block hover:text-blue-600" %> <!-- 将来用 -->
+        </div>
+
         <%#= link_to "・雪山検索", search_mountains_path, class: "block hover:text-blue-600" %>
         <%#= link_to "・周辺施設検索", nearby_facilities_path, class: "block hover:text-blue-600" %>
         <%= link_to "・プロフィール", edit_profile_path, class: "block hover:text-blue-600" %>

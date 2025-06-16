@@ -1,0 +1,32 @@
+<%= form_with model: post, local: true do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "エラー") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title, class: "border p-1 w-full" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body, "本文" %>
+    <%= f.text_area :body, class: "border p-1 w-full h-32" %>
+  </div>
+
+	<div class="field">
+  	<%= f.label :image, "画像" %>
+    <%= f.file_field :image %>
+  </div>
+
+	<div class="actions">
+		<%= f.submit "投稿" %>
+	</div>
+<% end %>
