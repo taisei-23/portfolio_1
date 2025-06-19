@@ -9,16 +9,11 @@
     <span class="text-gray-500 text-sm ml-2"><%= post.created_at.strftime("%Y/%m/%d %H:%M") %></span>
   </div>
 
-  <% if user_signed_in? && post.user == current_user %>
-    <%= link_to edit_post_path(post), class: "block text-black hover:underline" do %>
-      <h2 class="text-lg font-bold mb-1"><%= post.title %></h2>
-      <p class="mb-2"><%= truncate(post.body, length: 100) %></p>
-    <% end %>
-  <% else %>
-    <%= link_to post_path(post), class: "block text-black hover:underline" do %>
-      <h2 class="text-lg font-bold mb-1"><%= post.title %></h2>
-      <p class="mb-2"><%= truncate(post.body, length: 100) %></p>
-    <% end %>
+  <% path = user_signed_in? && post.user == current_user ? edit_post_path(post) : post_path(post) %>
+
+  <%= link_to path, class: "block text-black hover:underline" do %>
+    <h2 class="text-lg font-bold mb-1">タイトル: <%= post.title %></h2>
+    <p class="mb-2">本文: <%= truncate(post.body, length: 100) %></p>
   <% end %>
 
   <% if post.image.attached? %>
