@@ -1,0 +1,16 @@
+<!-- app/views/comments/_comment.html.erb -->
+
+<div class="p-2 mb-3 border rounded">
+  <p><strong><%= comment.user.name %></strong>：<%= comment.body %></p>
+
+  <% if comment.user == current_user %>
+    <!-- 編集リンク -->
+    <%= link_to '編集', edit_post_comment_path(comment.post, comment), class: "text-blue-500 mr-2" %>
+
+    <!-- 削除リンク（確認付き） -->
+    <%= link_to '削除', post_comment_path(comment.post, comment),
+                method: :delete,
+                data: { confirm: '本当に削除しますか？' },
+                class: "text-red-500" %>
+  <% end %>
+</div>
