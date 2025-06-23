@@ -1,1 +1,13 @@
 <%= render @post %>
+
+<%= render 'comments/form', post: @post, comment: Comment.new %>
+<div class="mt-4">
+  <h2 class="text-lg font-bold mb-2">コメント一覧</h2>
+  <% @post.comments.each do |comment| %>
+    <% if defined?(@editing_comment) && @editing_comment == comment %>
+      <%= render 'comments/form', post: @post, comment: @editing_comment %>
+    <% else %>
+      <%= render 'comments/comment', comment: comment %>
+    <% end %>
+  <% end %>
+</div>

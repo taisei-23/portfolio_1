@@ -29,6 +29,11 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    unless @post.user == current_user
+      redirect_to @post, alert: '他人の投稿は編集できません'
+      return
+    end
+
     if @post.update(post_params)
       redirect_to @post, notice: '更新しました'
     else

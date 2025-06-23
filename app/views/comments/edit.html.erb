@@ -1,0 +1,5 @@
+<h2 class="text-xl font-bold mb-4">コメントを編集</h2>
+
+<%= render 'comments/form', post: @post, comment: @comment %>
+
+<%= link_to "戻る", post_path(@post), class: "text-blue-600 underline mt-4 block" %>

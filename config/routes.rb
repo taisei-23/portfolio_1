@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root to: "posts#index"
-  resources :posts, only: [:index]
+
+  resources :posts do
+    resources :comments, only: [:create, :destroy, :edit, :update]
+  end
+
   resource :profile, only: [:edit, :update, :show]
 end
