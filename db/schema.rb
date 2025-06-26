@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_22_154834) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_26_104700) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -52,6 +52,27 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_22_154834) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "mountain_searches", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "mountain_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mountain_id"], name: "index_mountain_searches_on_mountain_id"
+    t.index ["user_id"], name: "index_mountain_searches_on_user_id"
+  end
+
+  create_table "mountains", force: :cascade do |t|
+    t.string "place_id"
+    t.string "name"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
+    t.float "rating"
+    t.integer "user_ratings_total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -78,5 +99,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_22_154834) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "mountain_searches", "mountains"
+  add_foreign_key "mountain_searches", "users"
   add_foreign_key "posts", "users"
 end

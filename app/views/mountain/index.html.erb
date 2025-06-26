@@ -1,0 +1,46 @@
+<h1>雪山検索</h1>
+
+<%= form_with url: mountain_path, method: :get, local: true do %>
+  <label>エリア名（例: 新潟、白馬）:</label>
+  <%= text_field_tag :area, params[:area] %>
+  <%= submit_tag "検索" %>
+<% end %>
+
+<% if @results.present? %>
+  <h2>「<%= params[:area] %>」周辺のスキー場</h2>
+
+  <div id="map" style="height: 400px;" class="my-4"></div>
+
+  <% @results.each do |place| %>
+    <div class="border p-2 my-2">
+      <strong><%= place["name"] %></strong><br>
+      <%= place["vicinity"] %>
+    </div>
+  <% end %>
+<% end %>
+
+<% if @lat && @lng %>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap">
+  </script>
+
+  <script>
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: { lat: <%= @lat %>, lng: <%= @lng %> },
+      });
+
+      <% @results.each do |place| %>
+        new google.maps.Marker({
+          position: {
+            lat: <%= place["geometry"]["location"]["lat"] %>,
+            lng: <%= place["geometry"]["location"]["lng"] %>
+          },
+          map: map,
+          title: "<%= j place["name"] %>"
+        });
+      <% end %>
+    }
+  </script>
+<% end %>
