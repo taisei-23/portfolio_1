@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   get "up" => "rails/health#show", as: :rails_health_check
 
+  get 'mountain', to: 'mountain#index'
+
   root to: "posts#index"
 
   resources :posts do
