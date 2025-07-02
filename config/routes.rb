@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get 'mountain', to: 'mountain#index'
+  get "search_routes", to: "routes#search"
+
 
   root to: "posts#index"
 
