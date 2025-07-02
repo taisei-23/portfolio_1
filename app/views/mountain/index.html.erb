@@ -1,23 +1,30 @@
-<h1>雪山検索</h1>
+<div class="flex h-hull">
+  <main class="flex-1 p-6 bg-white">
+    <h1>雪山検索</h1>
 
-<%= form_with url: mountain_path, method: :get, local: true do %>
-  <label>エリア名（例: 新潟、白馬）:</label>
-  <%= text_field_tag :area, params[:area] %>
-  <%= submit_tag "検索" %>
-<% end %>
+    <%= form_with url: mountain_path, method: :get, local: true do %>
+      <label>エリア名（例: 新潟、白馬）:</label>
+      <%= text_field_tag :area, params[:area] %>
+      <%= submit_tag "検索" %>
+    <% end %>
 
-<% if @results.present? %>
-  <h2>「<%= params[:area] %>」周辺のスキー場</h2>
+    <% if @results.present? %>
+      <h2>「<%= params[:area] %>」周辺のスキー場</h2>
 
-  <div id="map" style="height: 400px;" class="my-4"></div>
+      <div id="map" style="height: 400px;" class="my-4"></div>
 
-  <% @results.each do |place| %>
-    <div class="border p-2 my-2">
-      <strong><%= place["name"] %></strong><br>
-      <%= place["vicinity"] %>
-    </div>
+      <% @results.each do |place| %>
+        <div class="border p-2 my-2">
+          <strong><%= place["name"] %></strong><br>
+          <%= place["vicinity"] %>
+        </div>
+      <% end %>
+    <% end %>
+  </main>
+  <% if @search_completed %>
+    <%= render "mountain/sidebar" %>
   <% end %>
-<% end %>
+</div>
 
 <% if @lat && @lng %>
   <script async defer

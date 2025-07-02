@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import MountainSidebarController from "./mountain_sidebar_controller"
+application.register("mountain-sidebar", MountainSidebarController)
