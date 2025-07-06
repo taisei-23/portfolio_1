@@ -2,7 +2,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["panel", "carForm"]
+  static targets = ["panel"]
 
   connect() {
     console.log("✅ mountain-sidebar connected")
@@ -14,15 +14,9 @@ export default class extends Controller {
 
   selectCar() {
     console.log("🚗 車が選ばれました")
-    if (this.hasCarFormTarget) {
-      this.carFormTarget.classList.remove("hidden")
-    }
   }
 
   selectTrain() {
     console.log("🚆 電車が選ばれました")
-    if (this.hasCarFormTarget) {
-      this.carFormTarget.classList.add("hidden")
-    }
   }
 }
