@@ -1,28 +1,36 @@
 <aside
   data-controller="mountain-sidebar"
   data-mountain-sidebar-target="panel"
-  class="w-56 bg-white border-l border-black shadow-lg z-40 overflow-y-auto flex flex-col hidden"
+  class="w-56 bg-white border-l border-black shadow-lg z-40 overflow-y-auto flex flex-col"
 >
-  <div class="p-4">
-    <h2 class="text-lg font-semibold mb-4">移動手段を選択</h2>
-    <div class="flex space-x-4 text-2xl mb-4">
-      <button data-action="click->mountain-sidebar#selectCar">🚗</button>
-      <button data-action="click->mountain-sidebar#selectTrain">🚆</button>
-    </div>
+  <div class="p-4 flex flex-col">
+    <h2 class="text-lg font-semibold mb-4">経路検索欄</h2>
+    <div class="flex flex-col space-y-4 text-2xl mb-4">
+      <button data-action="click->mountain-sidebar#selectCar" class="w-full text-left">🚗 車</button>
+      <form action="/routes/show" method="get" class="space-y-2">
+        <div>
+          <label for="car_from" class="block text-sm font-medium">現在地</label>
+          <input type="text" name="from" id="car_from" class="w-full border rounded px-2 py-1" placeholder="現在地を入力">
+        </div>
+        <div>
+          <label for="car_to" class="block text-sm font-medium">目的地</label>
+          <input type="text" name="to" id="car_to" class="w-full border rounded px-2 py-1" placeholder="目的地を入力">
+        </div>
+        <button type="submit" class="bg-blue-600 text-white rounded px-3 py-1">検索</button>
+      </form>
 
-    <div data-mountain-sidebar-target="carForm" class="hidden">
-      <h3 class="text-md font-semibold mb-2">車での経路検索</h3>
-      <%= form_with url: search_routes_path, method: :get, local: true do %>
-        <div class="mb-2">
-          <label>現在地：</label>
-          <%= text_field_tag :origin, nil, class: "w-full border p-1" %>
+      <button data-action="click->mountain-sidebar#selectTrain" class="w-full text-left">🚆 電車</button>
+      <form action="/train_route" method="get" class="space-y-2">
+        <div>
+          <label for="train_from" class="block text-sm font-medium">出発駅</label>
+          <input type="text" name="from" id="train_from" class="w-full border rounded px-2 py-1" placeholder="出発駅を入力">
         </div>
-        <div class="mb-2">
-          <label>目的地：</label>
-          <%= text_field_tag :destination, nil, class: "w-full border p-1" %>
+        <div>
+          <label for="train_to" class="block text-sm font-medium">目的地</label>
+          <input type="text" name="to" id="train_to" class="w-full border rounded px-2 py-1" placeholder="目的地を入力">
         </div>
-        <%= submit_tag "検索", class: "bg-blue-500 text-white px-3 py-1 rounded w-full" %>
-      <% end %>
+        <button type="submit" class="bg-blue-600 text-white rounded px-3 py-1">検索</button>
+      </form>
     </div>
   </div>
 </aside>

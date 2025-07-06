@@ -4,12 +4,11 @@
 
     <%= form_with url: mountain_path, method: :get, local: true do %>
       <label>エリア名（例: 新潟、白馬）:</label>
-      <%= text_field_tag :area, params[:area] %>
-      <%= submit_tag "検索" %>
+      <%= text_field_tag :area, params[:area], class: "border rounded px-2 py-1" %>
+      <%= submit_tag "検索", class: "bg-blue-600 text-white rounded px-3 py-1" %>
     <% end %>
 
     <% if @results.present? %>
-      <h2>「<%= params[:area] %>」周辺のスキー場</h2>
 
       <div id="map" style="height: 400px;" class="my-4"></div>
 
@@ -28,7 +27,7 @@
 
 <% if @lat && @lng %>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap&libraries=places">
   </script>
 
   <script>
