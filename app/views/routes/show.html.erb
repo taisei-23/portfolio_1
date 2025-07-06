@@ -8,26 +8,19 @@
   <div id="map" style="height: 500px;" class="my-6 border rounded shadow"></div>
 
   <div class="mt-6 border-t pt-4">
-    <h2 class="text-xl font-semibold mb-2">テキスト情報</h2>
-
+    <h2 class="text-xl font-semibold">テキスト情報</h2>
     <% if @route_data.present? %>
-      <p><strong>距離:</strong> <%= @route_data[:distance] %></p>
-      <p><strong>所要時間:</strong> <%= @route_data[:duration] %></p>
+      <% @route_data.each_with_index do |route, index| %>
+        <div class="mb-4 border-b pb-2">
+          <h3 class="font-bold">ルート <%= index + 1 %>：<%= route[:summary] %></h3>
+          <p><strong>距離:</strong> <%= route[:distance] %></p>
+          <p><strong>所要時間:</strong> <%= route[:duration] %></p>
+        </div>
+      <% end %>
     <% else %>
       <p class="text-red-600">経路情報を取得できませんでした。</p>
-
-      <% if @transport == "car" %>
-        <p class="text-sm text-gray-600">車モードで失敗しました。</p>
-      <% else %>
-        <p class="text-sm text-gray-600">
-          電車モードではルートが見つかりにくい場合があります。<br>
-          駅名をより正式な表記（例: "新宿駅 東口" → "新宿駅"）に変えてみてください。
-        </p>
-      <% end %>
     <% end %>
   </div>
-  <p>transport param: <%= @transport.inspect %></p>
-</div>
 
 
   <script>
@@ -48,14 +41,31 @@
       origin: from,
       destination: to,
       travelMode: google.maps.TravelMode[travelMode],
+      provideRouteAlternatives: true,
     }, (response, status) => {
       if (status === "OK") {
-        directionsRenderer.setDirections(response);
+        response.routes.forEach((route, index) => {
+          const directionsRenderer = new google.maps.DirectionsRenderer({
+            map: map,
+            directions: response,
+            routeIndex: index,
+            polylineOptions: {
+              strokeColor: getColor(index),
+              strokeOpacity: 0.6,
+              strokeWeight: 5,
+            }
+          });
+        });
       } else {
         console.error("Directions API error in JS:", status);
         alert("経路を取得できませんでした: " + status);
       }
     });
+    
+    function getColor(index) {
+      const colors = ["#4285F4", "#34A853", "#FBBC05", "#EA4335"];
+      return colors[index % colors.length];
+    }
   }
 
 </script>
