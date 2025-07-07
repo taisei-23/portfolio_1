@@ -7,13 +7,20 @@ class RoutesController < ApplicationController
     @transport = params[:transport]
     @from = params[:from]
     @to = params[:to]
-    @waypoints = params[:waypoints]
+    @waypoints = Array(params[:waypoints]).reject(&:blank?)
 
     if @from.present? && @to.present?
-      @route_data = fetch_directions(@from, @to, @transport)
+      directions = fetch_directions(@from, @to, @transport)
+      tolls = fetch_toll_data(from: @from, to: @to, waypoints: @waypoints)
+
+      @route_data = directions&.each_with_index.map do |route, index|
+        toll_info = tolls[index] || { toll: 0, currency: "JPY" }
+        route.merge(toll_info)
+      end
     else
       @route_data = nil
     end
+    Rails.logger.info "🚗 from: #{@from}, to: #{@to}, waypoints: #{@waypoints.inspect}"
   end
 
   def fetch_directions(from, to, transport)
@@ -42,6 +49,90 @@ class RoutesController < ApplicationController
     else
       Rails.logger.error("Directions API error: #{json['status']} - #{json['error_message']}")
       return nil
+    end
+  end
+
+  def fetch_toll_data(from:, to:, waypoints: [])
+    base_url = "https://router.hereapi.com/v8/routes"
+    api_key = ENV["HERE_API_KEY"]
+
+    origin = geocode(from)
+    destination = geocode(to)
+
+    Rails.logger.info "🛰️ Requesting toll data with origin=#{origin}, destination=#{destination}"
+
+    params = {
+      origin: origin,
+      destination: destination,
+      transportMode: "car",
+      return: "summary,tolls",
+      alternatives: 3,
+      apiKey: api_key
+    }
+
+    if waypoints.any?
+      params[:via] = waypoints.map { |wp| geocode(wp) }
+    end
+
+    uri = URI(base_url)
+    uri.query = URI.encode_www_form(params)
+
+    Rails.logger.info "📡 Toll API request URL: #{uri}"
+
+    response = Net::HTTP.get_response(uri)
+    data = JSON.parse(response.body)
+
+    Rails.logger.info "📬 Toll API response: #{data}"
+
+    if data["routes"]
+      data["routes"].map do |route|
+        section = route["sections"].first
+
+        total_toll = 0
+        currency = "JPY"
+
+        if section["tolls"]
+          section["tolls"].each do |toll_info|
+            toll_info["fares"]&.each do |fare|
+              price = fare["price"]
+              total_toll += price["value"].to_f
+              currency = price["currency"] if price["currency"]
+            end
+          end
+        end
+
+        {
+          toll: total_toll,
+          currency: currency
+        }
+      end
+    else
+      Rails.logger.warn "❌ Toll data missing. Geocoded origin: #{origin}, destination: #{destination}"
+      Rails.logger.info "HERE API tolls response: #{data.to_json}"
+      []
+    end
+  end
+  
+  private
+
+  def geocode(location)
+    api_key = ENV["HERE_API_KEY"]
+    Rails.logger.info "🌐 Geocoding for location: #{location}"
+    base_url = "https://geocode.search.hereapi.com/v1/geocode"
+    uri = URI("#{base_url}?q=#{URI.encode_www_form_component(location)}&apiKey=#{api_key}")
+
+    response = Net::HTTP.get_response(uri)
+    data = JSON.parse(response.body)
+
+    Rails.logger.info "📨 Geocode API URL: #{uri}"
+    Rails.logger.info "📩 Geocode response: #{data}"
+
+    if data["items"] && data["items"].any?
+      pos = data["items"].first["position"]
+      "#{pos['lat']},#{pos['lng']}"
+    else
+      Rails.logger.warn "❌ Geocoding failed for: #{location}"
+      nil
     end
   end
 end
