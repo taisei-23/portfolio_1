@@ -15,6 +15,13 @@
           <h3 class="font-bold">ルート <%= index + 1 %>：<%= route[:summary] %></h3>
           <p><strong>距離:</strong> <%= route[:distance] %></p>
           <p><strong>所要時間:</strong> <%= route[:duration] %></p>
+          <p><strong>料金:</strong>
+            <% if route[:toll].to_f > 0 %>
+              <%= number_to_currency(route[:toll], unit: "￥", precision: 0) %>
+            <% else %>
+              無料または情報なし
+            <% end %>
+          </p>
         </div>
       <% end %>
     <% else %>
@@ -28,6 +35,10 @@
     const from = "<%= j @from %>";
     const to = "<%= j @to %>";
     const travelMode = "DRIVING";
+    const waypoints = <%= raw @waypoints.to_json %>.map(location => ({
+      location: location,
+      stopover: true
+    }));
 
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 7,
@@ -40,32 +51,40 @@
     directionsService.route({
       origin: from,
       destination: to,
+      waypoints: waypoints,
       travelMode: google.maps.TravelMode[travelMode],
       provideRouteAlternatives: true,
+      optimizeWaypoints: true,
     }, (response, status) => {
       if (status === "OK") {
         response.routes.forEach((route, index) => {
+          if (index === 0) return;
           const directionsRenderer = new google.maps.DirectionsRenderer({
             map: map,
             directions: response,
             routeIndex: index,
             polylineOptions: {
-              strokeColor: getColor(index),
+              strokeColor: "#FFE082",
               strokeOpacity: 0.6,
               strokeWeight: 5,
             }
           });
+        });
+        new google.maps.DirectionsRenderer({
+          map: map,
+          directions: response,
+          routeIndex: 0,
+          polylineOptions: {
+            strokeColor: "#4285F4",
+            strokeOpacity: 1.0,
+            strokeWeight: 6,
+          }
         });
       } else {
         console.error("Directions API error in JS:", status);
         alert("経路を取得できませんでした: " + status);
       }
     });
-    
-    function getColor(index) {
-      const colors = ["#4285F4", "#34A853", "#FBBC05", "#EA4335"];
-      return colors[index % colors.length];
-    }
   }
 
 </script>
