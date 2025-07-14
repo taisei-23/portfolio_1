@@ -3,3 +3,4 @@ Rails.start()
 
 import "./controllers"
 import "controllers"
+import "@hotwired/turbo-rails"

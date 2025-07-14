@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "train_route_sidebar", to: "train_routes#sidebar"
   get "routes/show"
   resources :posts
   devise_for :users
