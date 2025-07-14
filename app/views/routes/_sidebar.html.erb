@@ -24,7 +24,7 @@
       </form>
 
       <button data-action="click->mountain-sidebar#selectTrain" class="w-full text-left">🚆 電車</button>
-      <form action="/train_route" method="get" class="space-y-2">
+      <form action="/train_route_sidebar" method="get" data-turbo-frame="train_link_result" class="space-y-2">
         <div>
           <label for="train_from" class="block text-sm font-medium">出発駅</label>
           <input type="text" name="from" id="train_from" class="w-full border rounded px-2 py-1" placeholder="出発駅を入力">
@@ -35,6 +35,8 @@
         </div>
         <button type="submit" class="bg-blue-600 text-white rounded px-3 py-1">検索</button>
       </form>
+      <turbo-frame id="train_link_result">
+      </turbo-frame>
     </div>
   </div>
 </aside>
