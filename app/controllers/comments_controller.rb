@@ -1,22 +1,22 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:create, :destroy, :edit, :update]
-  before_action :set_comment, only: [:destroy, :edit, :update]
+  before_action :set_post, only: [ :create, :destroy, :edit, :update ]
+  before_action :set_comment, only: [ :destroy, :edit, :update ]
 
   def edit
     @editing_comment = @post.comments.find(params[:id])
     @comment = Comment.new
-    render 'posts/show'
+    render "posts/show"
   end
 
   def update
     unless @comment.user == current_user
-      redirect_to @post, alert: '他人のコメントは編集できません'
+      redirect_to @post, alert: "他人のコメントは編集できません"
       return
     end
 
     if @comment.update(comment_params)
-      redirect_to @post, notice: 'コメントを更新しました'
+      redirect_to @post, notice: "コメントを更新しました"
     else
       render :edit
     end
@@ -27,17 +27,17 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to @post, notice: 'コメントを投稿しました'
+      redirect_to @post, notice: "コメントを投稿しました"
     else
-      redirect_to @post, alert: 'エラーが発生しました'
+      redirect_to @post, alert: "エラーが発生しました"
     end
   end
 
   def destroy
     if @comment.user == current_user && @comment.destroy
-      redirect_to @post, notice: 'コメントを削除しました'
+      redirect_to @post, notice: "コメントを削除しました"
     else
-      redirect_to @post, alert: 'エラーが発生しました'
+      redirect_to @post, alert: "エラーが発生しました"
     end
   end
 

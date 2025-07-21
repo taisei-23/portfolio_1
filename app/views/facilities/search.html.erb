@@ -1,0 +1,59 @@
+<div class="flex h-full">
+  <main class="flex-1 p-6 bg-white">
+    <h1>施設検索</h1>
+    <br>
+
+    <%= form_with url: facilities_path, method: :get, local: true do %>
+      <div class="mb-2">
+        <label>スキー場名 :</label>
+        <%= text_field_tag :name, params[:name], placeholder: "例: 石打丸山スキー場", class: "border rounded px-2 py-1" %>
+      </div>
+      <div class="mb-2">
+        <label>キーワード:</label>
+        <%= text_field_tag :keyword, params[:keyword], placeholder: "例: レンタルショップ", class: "border rounded px-2 py-1" %>
+      </div>
+      <br>
+      <%= submit_tag "検索", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+    <% end %>
+    <br>
+
+    <% if @mountain.present? && @places.present? %>
+      <div id="map" style="height: 400px;" class="my-4"></div>
+
+      <% @places.each do |place| %>
+        <div class="border p-2 my-2">
+          <strong><%= place["name"] %></strong><br>
+          <%= place["vicinity"] %>
+        </div>
+      <% end %>
+
+      <script>
+        function initMap() {
+          const center = { lat: <%= @mountain.latitude %>, lng: <%= @mountain.longitude %> };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 13,
+            center: center,
+          });
+
+          <% @places.each do |place| %>
+            new google.maps.Marker({
+              position: {
+              lat: <%= place["geometry"]["location"]["lat"] %>,
+              lng: <%= place["geometry"]["location"]["lng"] %>
+              },
+              map: map,
+              title: "<%= j place["name"] %>"
+            });
+          <% end %>
+        }
+      </script>
+
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap">
+      </script>
+
+    <% elsif @places.blank? && params[:name].present? %>
+      <p class="mt-4 text-red-600">周辺施設が見つかりませんでした。</p>
+    <% end %>
+  </main>
+</div>
