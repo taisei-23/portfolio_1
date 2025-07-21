@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to posts_path, notice: '作成しました'
+      redirect_to posts_path, notice: "作成しました"
     else
       render :new
     end
@@ -30,12 +30,12 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     unless @post.user == current_user
-      redirect_to @post, alert: '他人の投稿は編集できません'
+      redirect_to @post, alert: "他人の投稿は編集できません"
       return
     end
 
     if @post.update(post_params)
-      redirect_to @post, notice: '更新しました'
+      redirect_to @post, notice: "更新しました"
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: '削除しました'
+    redirect_to posts_path, notice: "削除しました"
   end
 
   def search

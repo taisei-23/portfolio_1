@@ -1,6 +1,6 @@
-require 'net/http'
-require 'uri'
-require 'json'
+require "net/http"
+require "uri"
+require "json"
 
 class RoutesController < ApplicationController
   def show
@@ -37,9 +37,10 @@ class RoutesController < ApplicationController
     Rails.logger.info "Directions API response: #{json}"
 
     if json["status"] == "OK"
-      return json["routes"].map do |route|
+      json["routes"].map do |route|
         leg = route["legs"][0]
         {
+          summary: route["summary"],
           distance: leg["distance"]["text"],
           duration: leg["duration"]["text"],
           start_address: leg["start_address"],
@@ -48,7 +49,7 @@ class RoutesController < ApplicationController
       end
     else
       Rails.logger.error("Directions API error: #{json['status']} - #{json['error_message']}")
-      return nil
+      nil
     end
   end
 
@@ -112,7 +113,7 @@ class RoutesController < ApplicationController
       []
     end
   end
-  
+
   private
 
   def geocode(location)

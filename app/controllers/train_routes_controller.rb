@@ -5,9 +5,9 @@ class TrainRoutesController < ApplicationController
     logger.debug "🚆 FROM: #{@from}, TO: #{@to}"
 
     if @from.present? && @to.present?
-      render partial: "train_routes/yahoo_link", formats: [:html]
+      render partial: "train_routes/yahoo_link", formats: [ :html ]
     else
-      render partial: "train_routes/empty", formats: [:html]
+      render partial: "train_routes/empty", formats: [ :html ]
     end
   end
 end

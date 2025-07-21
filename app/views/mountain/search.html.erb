@@ -40,11 +40,11 @@
       <% @results.each do |place| %>
         new google.maps.Marker({
           position: {
-            lat: <%= place["geometry"]["location"]["lat"] %>,
-            lng: <%= place["geometry"]["location"]["lng"] %>
+            lat: <%= place.latitude %>,
+            lng: <%= place.longitude %>
           },
           map: map,
-          title: "<%= j place["name"] %>"
+          title: "<%= j place.name %>"
         });
       <% end %>
     }
