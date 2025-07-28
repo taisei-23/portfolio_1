@@ -1,0 +1,7 @@
+<div class="p-4 bg-gray-100 rounded mb-4">
+  <%= search_form_for @q, url: search_posts_path, method: :get, html: { class: "flex space-x-2" } do |f| %>
+    <%= f.label :title_or_body_cont, "検索", class: "sr-only" %>
+    <%= f.search_field :title_or_body_cont, placeholder: "タイトルや本文を検索", class: "border p-2 rounded w-full" %>
+    <%= f.submit "検索", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+  <% end %>
+</div>

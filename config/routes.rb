@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get "up", to: "rails/health#show", as: :rails_health_check
 
   resources :posts do
+    collection do
+      get :search
+    end
+
     resources :comments, only: [ :create, :destroy, :edit, :update ]
   end
 
@@ -17,7 +21,6 @@ Rails.application.routes.draw do
   get "train_route_sidebar", to: "train_routes#sidebar"
 
   get "facilities", to: "facilities#search"
-  get "facilities/index"
 
   root to: "posts#index"
 end

@@ -1,26 +1,32 @@
-<h2>ログイン</h2>
+<div class="min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-md bg-white p-8">
+    <h2 class="text-2xl font-bold mb-6 text-center">ログイン</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), local: true) do |f| %>
-  <div class="field">
-    <%= f.label :email, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), local: true) do |f| %>
+      <div class="mb-4">
+        <%= f.label :email, "メールアドレス", class: "block mb-1 font-semibold" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-80 border border-gray-300 rounded p-2" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password, "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+      <div class="mb-4">
+        <%= f.label :password, "パスワード", class: "block mb-1 font-semibold" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "w-80 border border-gray-300 rounded p-2" %>
+      </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <% if devise_mapping.rememberable? %>
+        <div class="mb-4">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, class: "ml-2" %>
+        </div>
+      <% end %>
+
+      <div class="text-center">
+        <%= f.submit "ログイン", class: "bg-blue-600 hover:bg-blue-700 text-white rounded px-5 py-1" %>
+      </div>
+    <% end %>
+
+    <div class="text-center">
+      <%= render "devise/shared/links" %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "ログイン"%>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

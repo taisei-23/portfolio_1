@@ -8,12 +8,14 @@ class RoutesController < ApplicationController
     @from = params[:from]
     @to = params[:to]
     @waypoints = Array(params[:waypoints]).reject(&:blank?)
+    @show_sidebar = true
+
 
     if @from.present? && @to.present?
       directions = fetch_directions(@from, @to, @transport)
       tolls = fetch_toll_data(from: @from, to: @to, waypoints: @waypoints)
 
-      @route_data = directions&.each_with_index.map do |route, index|
+      @route_data = (directions || []).each_with_index.map do |route, index|
         toll_info = tolls[index] || { toll: 0, currency: "JPY" }
         route.merge(toll_info)
       end
@@ -78,16 +80,13 @@ class RoutesController < ApplicationController
     uri = URI(base_url)
     uri.query = URI.encode_www_form(params)
 
-    Rails.logger.info "📡 Toll API request URL: #{uri}"
-
     response = Net::HTTP.get_response(uri)
     data = JSON.parse(response.body)
 
-    Rails.logger.info "📬 Toll API response: #{data}"
-
     if data["routes"]
       data["routes"].map do |route|
-        section = route["sections"].first
+        section = route["sections"]&.first
+        next { toll: 0, currency: "JPY" } unless section
 
         total_toll = 0
         currency = "JPY"

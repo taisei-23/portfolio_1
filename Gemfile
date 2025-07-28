@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "rails-i18n"
+
 gem "ransack"
 
 gem "devise"
@@ -73,6 +75,12 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "webmock"
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem 'factory_bot_rails'
 end
 
 gem "dockerfile-rails", ">= 1.7", group: :development

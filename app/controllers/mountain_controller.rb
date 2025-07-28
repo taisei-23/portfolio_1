@@ -31,7 +31,7 @@ class MountainController < ApplicationController
         @search_completed = true
       else
         @results = []
-        flash.now[:alert] = "エリアが見つかりませんでした。"
+        flash.now[:alert] = "エリアが見つかりませんでした"
         @search_completed = false
       end
     else
