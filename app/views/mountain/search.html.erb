@@ -1,9 +1,9 @@
 <div class="flex h-hull">
   <main class="flex-1 p-6 bg-white">
-    <h1>雪山検索</h1>
+    <h2 class="text-2xl font-bold mb-6 text-center">雪山検索</h2>
 
     <%= form_with url: mountain_path, method: :get, local: true do %>
-      <label>エリア名（例: 新潟、白馬）:</label>
+      <label class="font-bold">エリア名（例: 新潟、白馬）：</label>
       <%= text_field_tag :area, params[:area], class: "border rounded px-2 py-1" %>
       <%= submit_tag "検索", class: "bg-blue-600 text-white rounded px-3 py-1" %>
     <% end %>

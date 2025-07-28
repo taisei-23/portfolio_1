@@ -1,6 +1,6 @@
 <turbo-frame id="train_link_result">
   <div class="mt-4 border-t pt-2">
-    <h3 class="font-semibold text-lg">🔗 Yahoo!路線検索</h3>
+    <h3 class="font-semibold text-lg">🔗 Yahoo!路線情報</h3>
     <% yahoo_url = "https://transit.yahoo.co.jp/search/result?from=#{CGI.escape(@from)}&to=#{CGI.escape(@to)}" %>
     <a href="<%= yahoo_url %>" target="_blank" class="text-blue-600 underline block mt-2">
       Yahoo!で「<%= @from %> → <%= @to %>」の電車ルートを開く

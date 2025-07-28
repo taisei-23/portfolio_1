@@ -49,7 +49,7 @@ class PostsController < ApplicationController
 
   def search
     @q = Post.ransack(params[:q])
-    @posts = @q.result.includes(:user).page(params[:page])
+    @posts = @q.result.includes(:user)
     render :index
   end
 

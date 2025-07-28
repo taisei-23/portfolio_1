@@ -27,9 +27,22 @@
       <% end %>
 
       <main class="flex-1 overflow-y-auto bg-white relative">
-        <%= yield %>
-      </main>
-    </div>
+
+      <% if notice %>
+        <div class="transition-opacity duration-500 opacity-100 bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded mb-4 mx-4 mt-4">
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="transition-opacity duration-500 opacity-100 bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-4 mx-4 mt-4">
+          <%= alert %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </main>
+  </div>
 
     <%= render "shared/footer" %>
   </body>

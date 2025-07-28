@@ -29,8 +29,9 @@ module.exports = {
     'z-50',
     'hidden',
     'overflow-y-auto',
-    'h-full',
     'mr-56',
+    'px-5',
+    'w-80',
   ],
   theme: {
     extend: {},

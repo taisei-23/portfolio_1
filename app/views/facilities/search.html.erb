@@ -1,15 +1,15 @@
 <div class="flex h-full">
   <main class="flex-1 p-6 bg-white">
-    <h1>施設検索</h1>
+    <h2 class="text-2xl font-bold mb-6 text-center">施設検索</h2>
     <br>
 
     <%= form_with url: facilities_path, method: :get, local: true do %>
       <div class="mb-2">
-        <label>スキー場名 :</label>
+        <label class="font-bold">スキー場名 ：</label>
         <%= text_field_tag :name, params[:name], placeholder: "例: 石打丸山スキー場", class: "border rounded px-2 py-1" %>
       </div>
       <div class="mb-2">
-        <label>キーワード:</label>
+        <label class="font-bold">キーワード：</label>
         <%= text_field_tag :keyword, params[:keyword], placeholder: "例: レンタルショップ", class: "border rounded px-2 py-1" %>
       </div>
       <br>
@@ -53,7 +53,7 @@
       </script>
 
     <% elsif @places.blank? && params[:name].present? %>
-      <p class="mt-4 text-red-600">周辺施設が見つかりませんでした。</p>
+      <p class="mt-4 text-red-600">周辺施設が見つかりませんでした</p>
     <% end %>
   </main>
 </div>
