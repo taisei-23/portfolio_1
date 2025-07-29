@@ -80,7 +80,7 @@ end
 
 group :development, :test do
   gem "rspec-rails"
-  gem 'factory_bot_rails'
+  gem "factory_bot_rails"
 end
 
 gem "dockerfile-rails", ">= 1.7", group: :development
