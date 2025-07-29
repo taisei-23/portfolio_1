@@ -3,6 +3,10 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
+import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers"
+
+const context = require.context(".", true, /\.js$/)
+application.load(definitionsFromContext(context))
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
