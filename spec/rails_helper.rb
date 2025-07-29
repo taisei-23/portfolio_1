@@ -1,7 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
 
-#初期環境はRAILS_ENV=developmentなので、テストはRAILS_ENV=test bundle exec rspecで実行すること
+# 初期環境はRAILS_ENV=developmentなので、テストはRAILS_ENV=test bundle exec rspecで実行すること
 
 require_relative '../config/environment'
 
@@ -20,7 +20,6 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
-  
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
   ]

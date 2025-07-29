@@ -18,7 +18,7 @@
             <p><strong>所要時間:</strong> <%= route[:duration] %></p>
             <p><strong>料金:</strong>
               <% if route[:toll].to_f > 0 %>
-                <%= number_to_currency(route[:toll], unit: "￥", precision: 0) %>
+                <%= "￥#{number_with_delimiter(route[:toll].to_i)}" %>
               <% else %>
                 無料または情報なし
               <% end %>
