@@ -22,7 +22,7 @@
         <%= link_to "・雪山検索", mountain_path, class: "block hover:text-blue-600" %>
         <%= link_to "・周辺施設検索", facilities_path, class: "block hover:text-blue-600" %>
         <%= link_to "・プロフィール", edit_profile_path, class: "block hover:text-blue-600" %>
-        <%= link_to "・ログアウト", destroy_user_session_path, method: :delete, class: "block text-red-600 hover:text-red-800", data: { confirm: "本当にログアウトしますか？" }  %>
+        <%= button_to "・ログアウト", destroy_user_session_path, method: :delete, class: "block text-red-600 hover:text-red-800", data: { confirm: "本当にログアウトしますか？" }  %>
       </nav>
     </div>
   <% end %>
