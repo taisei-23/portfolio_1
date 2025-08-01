@@ -10,8 +10,7 @@ class ProfilesController < ApplicationController
     if @user.update(user_params)
      redirect_to edit_profile_path, notice: "プロフィールを更新しました"
     else
-     flash.now[:alert] = "プロフィールの更新に失敗しました"
-     render :edit
+      redirect_to edit_profile_path, alert: "プロフィールの更新に失敗しました"
     end
   end
 

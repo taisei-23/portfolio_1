@@ -3,20 +3,15 @@
 <div class="items-center">
   <div class="max-w-2xl mx-auto bg-white p-6">
 
-    <% if @user.icon_image.attached? %>
-      <div>
-        <p><%= image_tag @user.icon_image.variant(resize_to_limit: [150, 150])%>
-        <strong><%= @user.name %></strong>
-        </p>
-      </div>
-    <% else %>
-      <p class="font-bold">
+      <% if @user.icon_image.attached? %>
+        <%= image_tag @user.icon_image.variant(resize_to_limit: [150, 150]), class: "mx-auto rounded-full" %>
+        <p class="mt-2 font-bold"><%= @user.name %></p>
+      <% else %>
         <div class="mb-2 font-bold">アイコン未設定</div>
-        <strong>ユーザー名：<%= @user.name %></strong>
-      </p>
+        <p class="font-bold">ユーザー名：<%= @user.name %></p>
+      <% end %>
 
-    <% end %>
-
+    <br />
     <%= form_with model: @user, url: profile_path, method: :patch, local: true, multipart: true do |f| %>
       <div class="mb-4">
         <%= f.label :name, "新しいユーザー名", class: "font-bold" %><br>

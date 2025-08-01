@@ -3,6 +3,17 @@
 
 <div class="items-center">
   <div class="max-w-2xl mx-auto bg-white p-6">
+    <% if @post.errors.any? %>
+      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-4">
+        <p><strong>以下のエラーがあります:</strong></p>
+        <ul class="list-disc list-inside">
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <%= render 'form', post: @post %>
   </div>
 </div>
