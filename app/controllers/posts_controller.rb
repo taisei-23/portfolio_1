@@ -19,7 +19,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, notice: "作成しました"
     else
-      render :new
+      flash.now[:alert] = "投稿に失敗しました"
+      render :new, status: :unprocessable_entity
     end
   end
 
