@@ -10,12 +10,13 @@
 
     <% if @results.present? %>
 
+
       <div id="map" style="height: 400px;" class="my-4"></div>
 
       <% @results.each do |place| %>
         <div class="border p-2 my-2">
-          <strong><%= place["name"] %></strong><br>
-          <%= place["vicinity"] %>
+          <strong><%= place.name %></strong><br>
+          <%= place.address %>
         </div>
       <% end %>
     <% end %>
