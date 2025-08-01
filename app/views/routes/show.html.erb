@@ -4,7 +4,16 @@
 
     <p><strong>移動手段:</strong> <%= @transport == "car" ? "車" : "電車" %></p>
     <p><strong>出発:</strong> <%= @from %></p>
+    <% if @waypoints.present? %>
+      <p><strong>経由地:</strong>
+        <%= @waypoints.map { |w| w[:location] }.join(", ") %>
+      </p>
+    <% else %>
+      <p><strong>経由地:</strong> なし</p>
+    <% end %>
     <p><strong>目的地:</strong> <%= @to %></p>
+    <br />
+    <p>※料金が表示されない場合、目的地に詳細な住所を入れてください<br>例: 東京都千代田区1-1</p>
 
     <div id="map" style="height: 500px;" class="my-6 border rounded shadow"></div>
 
