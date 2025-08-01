@@ -22,5 +22,5 @@ Rails.application.routes.draw do
 
   get "facilities", to: "facilities#search"
 
-  root to: "posts#index"
+  root to: "home#index"
 end
