@@ -26,6 +26,17 @@
       <% end %>
 
       <main class="flex-1 overflow-y-auto bg-white relative">
+
+        <% if flash[:notice].present? %>
+          <div class="bg-green-100 text-green-800 p-4 rounded">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <% if flash[:alert].present? %>
+          <div class="bg-red-100 text-red-800 p-4 rounded">
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
         <%= yield %>
       </main>
     </div>
