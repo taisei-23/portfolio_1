@@ -24,7 +24,7 @@ FROM base AS build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libpq-dev libyaml-dev pkg-config curl gnupg && \
+    apt-get install --no-install-recommends -y build-essential git libpq-dev libyaml-dev pkg-config curl gnupg libffi-dev && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
