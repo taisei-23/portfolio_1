@@ -1,16 +1,17 @@
-# fly.toml app configuration file generated for portfolio-1-long-star-5996 on 2025-06-08T19:28:41+09:00
+# fly.toml app configuration file generated for mountrail on 2025-08-11T18:40:37+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'portfolio-1-long-star-5996'
-primary_region = 'nrt'
+app = 'mountrail'
+primary_region = 'syd'
 console_command = '/rails/bin/rails console'
 
 [build]
 
 [deploy]
-  release_command = './bin/rails db:prepare'
+  release_command = "./bin/rails db:migrate"
+
 
 [env]
   PORT = '8080'
@@ -25,6 +26,18 @@ console_command = '/rails/bin/rails console'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
+
+  [[http_service.checks]]
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/up'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [http_service.checks.headers]
+      X-Forwarded-Proto = 'https'
 
 [[vm]]
   memory = '1gb'
