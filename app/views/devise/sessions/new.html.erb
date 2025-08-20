@@ -23,6 +23,9 @@
       <div class="text-center">
         <%= f.submit "ログイン", class: "bg-blue-600 hover:bg-blue-700 text-white rounded px-5 py-1" %>
       </div>
+
+<%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, class: "btn btn-google", data: { turbo: false } %>
+
     <% end %>
 
     <div class="text-center">
