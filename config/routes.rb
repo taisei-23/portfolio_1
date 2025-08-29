@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get :search
+      get :bookmarks
     end
 
     resources :comments, only: [ :create, :destroy, :edit, :update ]
+    resources :bookmarks, only: [ :create, :destroy ]
   end
 
   resource :profile, only: [ :edit, :update, :show ]

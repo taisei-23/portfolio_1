@@ -16,7 +16,7 @@
         <div id="posts-submenu" class="ml-4 space-y-2 hidden text-center">
           <%= link_to "掲示板一覧", posts_path, class: "block hover:text-blue-600" %>
           <%= link_to "掲示板作成", new_post_path, class: "block hover:text-blue-600" %>
-          <%#= link_to "ブックマークリスト", bookmarks_path, class: "block hover:text-blue-600" %> <!-- 将来用 -->
+          <%= link_to "★ブックマークリスト", bookmarks_posts_path, class: "block hover:text-blue-600" %>
         </div>
 
         <%= link_to "・雪山検索", mountain_path, class: "block hover:text-blue-600" %>

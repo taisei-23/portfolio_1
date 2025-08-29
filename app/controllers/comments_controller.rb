@@ -34,6 +34,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    Rails.logger.debug "Deleting comment with ID: #{params[:id]}"
     if @comment.user == current_user && @comment.destroy
       redirect_to @post, notice: "コメントを削除しました"
     else
