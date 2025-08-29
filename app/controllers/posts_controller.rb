@@ -54,6 +54,10 @@ class PostsController < ApplicationController
     render :index
   end
 
+  def bookmarks
+    @bookmarks = current_user.bookmarked_posts.includes(:user)
+  end
+
   private
 
   def post_params

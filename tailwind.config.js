@@ -32,6 +32,12 @@ module.exports = {
     'mr-56',
     'px-5',
     'w-80',
+    'text-yellow-500',
+    'text-xl',
+    'text-gray-400',
+    'bi-star',
+    'bi-star-fill',
+    'bi',
   ],
   theme: {
     extend: {},

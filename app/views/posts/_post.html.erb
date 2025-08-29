@@ -1,5 +1,5 @@
 <div class="border rounded p-4 mb-4 shadow-sm hover:shadow-md transition">
-  <div class="flex items-center mb-2">
+  <div class="flex items-center mb-2 p-2">
     <% if post.user.icon_image.attached? %>
       <%= image_tag post.user.icon_image.variant(resize_to_limit: [40, 40]), class: "rounded-full mr-2" %>
     <% else %>
@@ -20,5 +20,11 @@
     <div class="mb-2">
       <%= image_tag post.image.variant(resize_to_limit: [600, nil]), class: "w-full h-auto rounded" %>
     </div>
+  <% end %>
+
+  <% if current_user.bookmarks.find_by(post_id: post.id) %>
+    <%= render 'posts/unbookmark', post: post %>
+  <% else %>
+    <%= render 'posts/bookmark', post: post %>
   <% end %>
 </div>
