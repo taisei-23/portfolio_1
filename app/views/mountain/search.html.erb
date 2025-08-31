@@ -16,7 +16,7 @@
       <% @results.each do |place| %>
         <div class="border p-2 my-2">
           <strong><%= place.name %></strong><br>
-          <%= place.address %>
+          <%= "住所：#{place.address}" %>
         </div>
       <% end %>
     <% end %>
