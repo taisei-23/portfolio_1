@@ -38,6 +38,7 @@ module.exports = {
     'bi-star',
     'bi-star-fill',
     'bi',
+    'text-5xl',
   ],
   theme: {
     extend: {},

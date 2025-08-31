@@ -23,7 +23,7 @@
       <% @places.each do |place| %>
         <div class="border p-2 my-2">
           <strong><%= place["name"] %></strong><br>
-          <%= place["vicinity"] %>
+          <%= "住所：#{place["vicinity"]}" %>
         </div>
       <% end %>
 

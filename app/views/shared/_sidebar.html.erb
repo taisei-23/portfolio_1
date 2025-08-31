@@ -10,6 +10,7 @@
         <span class="font-semibold"><%= current_user.name %></span>
       </div>
       <nav class="space-y-3">
+        <%= link_to "・使い方", how_to_use_path, class: "block hover:text-blue-600" %>
         <button onclick="document.getElementById('posts-submenu').classList.toggle('hidden')" class="block hover:text-blue-600">
           ・掲示板
         </button>
