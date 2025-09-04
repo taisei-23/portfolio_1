@@ -53,7 +53,7 @@ RSpec.describe PostsController, type: :request do
         it "新規投稿フォームが表示される" do
           get new_post_path
           expect(response).to have_http_status(:ok)
-          expect(response.body).to include("投稿の新規作成") # ビューに合わせて調整してください
+          expect(response.body).to include("投稿の新規作成")
         end
       end
 
@@ -74,8 +74,9 @@ RSpec.describe PostsController, type: :request do
           it "newテンプレートが再表示される" do
             post_params = { title: "", body: "" }
             post posts_path, params: { post: post_params }
-            expect(response).to have_http_status(:ok)
-            expect(response.body).to include("投稿の新規作成") # フォームの文言に合わせて調整
+
+            expect(response).to have_http_status(:unprocessable_entity)
+            expect(response.body).to include("投稿の新規作成")
           end
         end
       end
@@ -85,7 +86,7 @@ RSpec.describe PostsController, type: :request do
           it "編集フォームが表示される" do
             get edit_post_path(post_record)
             expect(response).to have_http_status(:ok)
-            expect(response.body).to include("投稿の編集") # ビューの文言に合わせてください
+            expect(response.body).to include("投稿の編集")
           end
         end
 
@@ -93,7 +94,7 @@ RSpec.describe PostsController, type: :request do
           it "編集ページにアクセスできるが後続処理で制限（必要なら追加テスト）" do
             sign_in other_user
             get edit_post_path(post_record)
-            expect(response).to have_http_status(:ok) # コントローラーでは制限なしなのでOKになるが、updateで制限
+            expect(response).to have_http_status(:ok)
           end
         end
       end
@@ -122,7 +123,7 @@ RSpec.describe PostsController, type: :request do
 
       describe "DELETE #destroy" do
         it "投稿が削除されて投稿一覧にリダイレクトされる" do
-          post_record # 事前に生成しておく
+          post_record
           expect {
             delete post_path(post_record)
           }.to change(Post, :count).by(-1)

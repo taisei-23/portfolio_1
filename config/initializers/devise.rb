@@ -1,15 +1,15 @@
 Devise.setup do |config|
-  config.omniauth_path_prefix = '/users/auth'
-  config.omniauth :google_oauth2, 
-                  ENV['GOOGLE_CLIENT_ID'], 
-                  ENV['GOOGLE_CLIENT_SECRET'],
+  config.omniauth_path_prefix = "/users/auth"
+  config.omniauth :google_oauth2,
+                  ENV["GOOGLE_CLIENT_ID"],
+                  ENV["GOOGLE_CLIENT_SECRET"],
                   {
-                    scope: 'email,profile',
-                    prompt: 'select_account',
+                    scope: "email,profile",
+                    prompt: "select_account",
                     provider_ignores_state: true,
-                    skip_jwt: true 
+                    skip_jwt: true
                   }
-  OmniAuth.config.allowed_request_methods = [:post, :get]
+  OmniAuth.config.allowed_request_methods = [ :post, :get ]
   OmniAuth.config.silence_get_warning = true
 
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
@@ -38,5 +38,4 @@ Devise.setup do |config|
 
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
-
 end
