@@ -34,4 +34,24 @@ RSpec.configure do |config|
   config.before(:each, type: :request) do
     host! "www.example.com"
   end
+
+  OmniAuth.config.test_mode = true
+end
+
+def mock_google_auth(uid: '12345', email: 'test@example.com')
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(
+    provider: 'google_oauth2',
+    uid: uid,
+    info: {
+      email: email,
+      name: 'テストユーザー'
+    }
+  )
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end

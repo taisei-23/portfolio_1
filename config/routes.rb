@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   get "up", to: "rails/health#show", as: :rails_health_check
   get "how_to_use", to: "pages#how_to_use", as: :how_to_use

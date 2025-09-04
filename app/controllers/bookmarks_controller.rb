@@ -1,30 +1,31 @@
 class BookmarksController < ApplicationController
-	before_action :authenticate_user!
-	before_action :set_post, only: [:create, :destroy]
-	def create
-		@post = Post.find(params[:post_id])
-		current_user.bookmarks.create(post: @post)
+  before_action :authenticate_user!
+  before_action :set_post, only: [ :create, :destroy ]
 
-		respond_to do |format|
-			format.html { redirect_to post_path, notice: "ブックマークしました。" }
-			format.turbo_stream
-		end
-	end
+  def create
+    @post = Post.find(params[:post_id])
+    current_user.bookmarks.create(post: @post)
 
-	def destroy
-		@post = Post.find(params[:post_id])
-		bookmark = current_user.bookmarks.find_by(post: @post)
-		bookmark&.destroy
+    respond_to do |format|
+      format.html { redirect_to post_path(@post), notice: "ブックマークしました。" }
+      format.turbo_stream
+    end
+  end
 
-		respond_to do |format|
-			format.html { redirect_to post_path, notice: "ブックマークを解除しました。", status: :see_other }
-			format.turbo_stream
-		end
-	end
+  def destroy
+    @post = Post.find(params[:post_id])
+    bookmark = current_user.bookmarks.find_by(post: @post)
+    bookmark&.destroy
 
-	private
+    respond_to do |format|
+      format.html { redirect_to post_path, notice: "ブックマークを解除しました。", status: :see_other }
+      format.turbo_stream
+    end
+  end
 
-	def set_post
-		@post = Post.find(params[:post_id])
-	end
+  private
+
+  def set_post
+    @post = Post.find(params[:post_id])
+  end
 end
