@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :request do
   let(:user) { create(:user) }
   let(:other_user) { create(:user) }
-  let(:post_record) { create(:post, user: user) }
+  let!(:post_record) { create(:post, title: "Test Post", user: user) }
 
   describe "認証が必要なアクション" do
     context "ログインしていない場合" do

@@ -33,6 +33,7 @@ RSpec.configure do |config|
 
   config.before(:each, type: :request) do
     host! "www.example.com"
+    mock_google_auth
   end
 
   OmniAuth.config.test_mode = true
