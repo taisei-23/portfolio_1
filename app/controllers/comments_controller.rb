@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   def edit
     @editing_comment = @post.comments.find(params[:id])
     @comment = Comment.new
+    @comments = @post.comments.includes(:user)
     render "posts/show"
   end
 
