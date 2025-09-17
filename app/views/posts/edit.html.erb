@@ -1,0 +1,8 @@
+<h1>投稿の編集</h1>
+
+<%= render 'form', post: @post %>
+
+<div class="mt-4">
+  <%= link_to '戻る', posts_path, class: "bg-gray-300 text-black py-1 px-3 rounded" %>
+  <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "text-red-600 text-black py-1 px-3 rounded" %>
+</div>

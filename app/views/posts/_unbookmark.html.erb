@@ -1,0 +1,8 @@
+<%= link_to post_bookmark_path(post, current_user.bookmarks.find_by(post_id: post.id)), 
+    id: "unbookmark-button-for-post-#{post.id}", 
+    data: { 
+      turbo_method: :delete,
+      turbo_stream: true 
+    } do %>
+  <i class="bi bi-star-fill"></i>
+<% end %>
