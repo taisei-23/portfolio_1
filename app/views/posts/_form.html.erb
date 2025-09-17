@@ -1,0 +1,21 @@
+<%= form_with model: post, local: true do |f| %>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title, class: "w-full border border-gray-300 rounded p-2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body, "本文" %><br />
+    <%= f.text_area :body, class: "border border-gray-300 rounded p-2 w-full h-32" %>
+  </div>
+
+	<div class="field">
+  	<%= f.label :image, "画像" %><br />
+    <%= f.file_field :image, class: "border border-gray-300 rounded p-2" %>
+  </div>
+  <br />
+	<div class="actions">
+		<%= f.submit "投稿", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+	</div>
+<% end %>

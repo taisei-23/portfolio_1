@@ -1,0 +1,106 @@
+<div class="p-6 flex h-full">
+  <main class="flex-1">
+    <h1 class="text-2xl font-bold mb-6 text-center">経路検索結果</h1>
+
+    <p><strong>移動手段:</strong> 車</p>
+    <p><strong>出発:</strong> <%= @from %></p>
+    <% if @waypoints.present? %>
+      <p><strong>経由地:</strong>
+        <%= @waypoints.map { |w| w[:location] }.join(", ") %>
+      </p>
+    <% else %>
+      <p><strong>経由地:</strong> なし</p>
+    <% end %>
+    <p><strong>目的地:</strong> <%= @to %></p>
+    <br />
+    <p>※料金が表示されない場合、目的地に詳細な住所を入れてください<br>例: 東京都千代田区1-1</p>
+
+    <div id="map" style="height: 500px;" class="my-6 border rounded shadow"></div>
+
+    <div class="mt-6 border-t pt-4">
+      <h2 class="text-xl font-semibold">テキスト情報</h2>
+      <% if @route_data.present? %>
+        <% @route_data.each_with_index do |route, index| %>
+          <div class="mb-4 border-b pb-2">
+            <h3 class="font-bold">ルート <%= index + 1 %>：<%= route[:summary] %></h3>
+            <p><strong>距離:</strong> <%= route[:distance] %></p>
+            <p><strong>所要時間:</strong> <%= route[:duration] %></p>
+            <p><strong>料金:</strong>
+              <% if route[:toll].to_f > 0 %>
+                <%= "￥#{number_with_delimiter(route[:toll].to_i)}" %>
+              <% else %>
+                無料または情報なし
+              <% end %>
+            </p>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="text-red-600">経路情報を取得できませんでした。</p>
+      <% end %>
+    </main>
+    <%= render "routes/sidebar" %>
+  </div>
+
+
+  <script>
+    function initMap() {
+    const from = "<%= j @from %>";
+    const to = "<%= j @to %>";
+    const travelMode = "DRIVING";
+    const waypoints = <%= raw @waypoints.to_json %>.map(location => ({
+      location: location,
+      stopover: true
+    }));
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 7,
+      center: { lat: 36.2048, lng: 138.2529 }
+    });
+
+    const directionsService = new google.maps.DirectionsService();
+    const directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
+
+    directionsService.route({
+      origin: from,
+      destination: to,
+      waypoints: waypoints,
+      travelMode: google.maps.TravelMode[travelMode],
+      provideRouteAlternatives: true,
+      optimizeWaypoints: true,
+    }, (response, status) => {
+      if (status === "OK") {
+        response.routes.forEach((route, index) => {
+          if (index === 0) return;
+          const directionsRenderer = new google.maps.DirectionsRenderer({
+            map: map,
+            directions: response,
+            routeIndex: index,
+            polylineOptions: {
+              strokeColor: "#FFE082",
+              strokeOpacity: 0.6,
+              strokeWeight: 5,
+            }
+          });
+        });
+        new google.maps.DirectionsRenderer({
+          map: map,
+          directions: response,
+          routeIndex: 0,
+          polylineOptions: {
+            strokeColor: "#4285F4",
+            strokeOpacity: 1.0,
+            strokeWeight: 6,
+          }
+        });
+      } else {
+        console.error("Directions API error in JS:", status);
+        alert("経路を取得できませんでした: " + status);
+      }
+    });
+  }
+
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap&libraries=places">
+</script>

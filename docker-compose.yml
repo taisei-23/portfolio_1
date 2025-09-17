@@ -1,0 +1,32 @@
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: snow_mountain_app_development
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    user: root
+    build: .
+    env_file:
+      -  .env
+    working_dir: /app
+    command: bash -c "rm -f tmp/pids/server.pid && bin/rails server -b 0.0.0.0"
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:password@db:5432/snow_mountain_app_development
+      RAILS_ENV: development
+
+volumes:
+  postgres_data:

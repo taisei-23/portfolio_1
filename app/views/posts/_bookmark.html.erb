@@ -1,0 +1,8 @@
+<%= link_to post_bookmarks_path(post), 
+    id: "bookmark-button-for-post-#{post.id}", 
+    data: { 
+      turbo_method: :post,
+      turbo_stream: true 
+    } do %>
+  <i class="bi bi-star"></i>
+<% end %>

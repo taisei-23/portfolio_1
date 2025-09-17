@@ -1,0 +1,8 @@
+<%= form_with(model: [post, comment], local: true) do |f| %>
+  <div class="mb-2">
+    <%= f.label :body, "コメント内容" %><br>
+    <%= f.text_area :body, rows: 3, class: "w-80 p-2 border rounded" %>
+  </div>
+
+  <%= f.submit comment.persisted? ? "更新する" : "投稿する", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+<% end %>
