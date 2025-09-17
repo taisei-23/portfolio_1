@@ -91,6 +91,6 @@ end
 
 gem "dockerfile-rails", ">= 1.7", group: :development
 
-gem "aws-sdk-s3", "~> 1.189", require: false
+gem "aws-sdk-s3", "~> 1.199", require: false
 
 gem "rubocop", "~> 1.75"
