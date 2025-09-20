@@ -7,8 +7,13 @@ default: &default
   host: <%= ENV.fetch("PGHOST") { "localhost" } %>
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: app_development
+  username: postgres
+  password: postgres
+  host: db
 
 test:
   <<: *default
