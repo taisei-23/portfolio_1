@@ -7,7 +7,7 @@ FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 # Rails app lives here
 WORKDIR /app
 
-# Install base packages
+# Install base packages (ランタイム)
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y \
     curl libjemalloc2 libvips postgresql-client node-gyp python-is-python3 && \
@@ -24,9 +24,12 @@ FROM base AS build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libpq-dev libyaml-dev pkg-config curl gnupg libffi-dev && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    apt-get install --no-install-recommends -y \
+      build-essential git libpq-dev libyaml-dev pkg-config curl gnupg libffi-dev \
+      libvips-dev \
+    && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
+# Node.js + Yarn
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get update -qq && \
     apt-get install -y nodejs && \
@@ -36,9 +39,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get remove -y cmdtest && \
     apt-get install -y yarn
 
-
 COPY package.json yarn.lock ./
 RUN yarn install
+
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle config set frozen false
@@ -52,11 +55,8 @@ COPY . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
-# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+# Precompile assets
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
-
-
-
 
 # Final stage for app image
 FROM base
@@ -65,15 +65,13 @@ FROM base
 COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /app /app
 
-# Run and own only the runtime files as a non-root user for security
+# Run as non-root
 RUN groupadd --system --gid 1000 rails && \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER 1000:1000
 
-# Entrypoint prepares the database.
 ENTRYPOINT ["/app/bin/docker-entrypoint"]
 
-# Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 80
 CMD ["bin/rails", "server", "-b", "0.0.0.0", "-p", "80"]

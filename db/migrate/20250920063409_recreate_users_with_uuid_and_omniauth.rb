@@ -4,7 +4,7 @@ class RecreateUsersWithUuidAndOmniauth < ActiveRecord::Migration[8.0]
     remove_foreign_key :comments, :users if foreign_key_exists?(:comments, :users)
     remove_foreign_key :mountain_searches, :users if foreign_key_exists?(:mountain_searches, :users)
     remove_foreign_key :posts, :users if foreign_key_exists?(:posts, :users)
-    
+
     remove_foreign_key :bookmarks, :posts if foreign_key_exists?(:bookmarks, :posts)
 
     drop_table :users if table_exists?(:users)
@@ -24,7 +24,7 @@ class RecreateUsersWithUuidAndOmniauth < ActiveRecord::Migration[8.0]
 
     add_index :users, :email, unique: true
     add_index :users, :reset_password_token, unique: true
-    add_index :users, [:provider, :uid], unique: true
+    add_index :users, [ :provider, :uid ], unique: true
 
     if table_exists?(:bookmarks)
       execute "TRUNCATE TABLE bookmarks CASCADE"
@@ -49,7 +49,7 @@ class RecreateUsersWithUuidAndOmniauth < ActiveRecord::Migration[8.0]
       change_column :posts, :user_id, :uuid, using: 'gen_random_uuid()'
       add_foreign_key :posts, :users
     end
-    
+
     add_foreign_key :bookmarks, :posts if table_exists?(:bookmarks) && table_exists?(:posts)
   end
 
@@ -59,27 +59,27 @@ class RecreateUsersWithUuidAndOmniauth < ActiveRecord::Migration[8.0]
     remove_foreign_key :mountain_searches, :users if foreign_key_exists?(:mountain_searches, :users)
     remove_foreign_key :posts, :users if foreign_key_exists?(:posts, :users)
     remove_foreign_key :bookmarks, :posts if foreign_key_exists?(:bookmarks, :posts)
-    
+
     if table_exists?(:bookmarks)
       execute "TRUNCATE TABLE bookmarks CASCADE"
       change_column :bookmarks, :user_id, :bigint
     end
-    
+
     if table_exists?(:comments)
       execute "TRUNCATE TABLE comments CASCADE"
       change_column :comments, :user_id, :bigint
     end
-    
+
     if table_exists?(:mountain_searches)
       execute "TRUNCATE TABLE mountain_searches CASCADE"
       change_column :mountain_searches, :user_id, :bigint
     end
-    
+
     if table_exists?(:posts)
       execute "TRUNCATE TABLE posts CASCADE"
       change_column :posts, :user_id, :bigint
     end
-    
+
     drop_table :users if table_exists?(:users)
 
     create_table :users do |t|
@@ -93,11 +93,11 @@ class RecreateUsersWithUuidAndOmniauth < ActiveRecord::Migration[8.0]
       t.datetime :remember_created_at
       t.timestamps null: false
     end
-    
+
     add_index :users, :email, unique: true
     add_index :users, :reset_password_token, unique: true
-    add_index :users, [:provider, :uid], unique: true
-    
+    add_index :users, [ :provider, :uid ], unique: true
+
     add_foreign_key :bookmarks, :users if table_exists?(:bookmarks)
     add_foreign_key :comments, :users if table_exists?(:comments)
     add_foreign_key :mountain_searches, :users if table_exists?(:mountain_searches)

@@ -21,6 +21,8 @@ class User < ApplicationRecord
   has_many :mountain_searches, dependent: :destroy
   has_many :mountains, through: :mountain_searches
 
+  has_one_attached :avatar
+
   def bookmark?(post)
     bookmarked_posts.include?(post)
   end
