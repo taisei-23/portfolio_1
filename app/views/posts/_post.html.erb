@@ -9,7 +9,7 @@
     <span class="text-gray-500 text-sm ml-2"><%= post.created_at.strftime("%Y/%m/%d %H:%M") %></span>
   </div>
 
-  <% path = user_signed_in? && post.user == current_user ? edit_post_path(post) : post_path(post) %>
+  <% path = post_path(post) %>
 
   <%= link_to path, class: "block text-black hover:underline" do %>
     <h2 class="text-lg font-bold mb-1">タイトル: <%= post.title %></h2>

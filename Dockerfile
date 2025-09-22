@@ -10,8 +10,9 @@ WORKDIR /app
 # Install base packages (ランタイム)
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y \
-    curl libjemalloc2 libvips postgresql-client node-gyp python-is-python3 && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+      curl libjemalloc2 libvips postgresql-client node-gyp python-is-python3 \
+      imagemagick libmagickwand-dev \
+    && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Set production environment
 ENV RAILS_ENV="production" \
@@ -26,7 +27,7 @@ FROM base AS build
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y \
       build-essential git libpq-dev libyaml-dev pkg-config curl gnupg libffi-dev \
-      libvips-dev \
+      libvips-dev imagemagick libmagickwand-dev \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Node.js + Yarn

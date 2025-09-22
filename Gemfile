@@ -18,7 +18,8 @@ gem "image_processing", "~> 1.2"
 
 gem "httparty"
 
-gem "image_processing", "~> 1.2"
+gem "mini_magick"
+gem "meta-tags"
 
 gem "dotenv-rails", groups: [ :development, :test ]
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

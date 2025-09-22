@@ -9,6 +9,26 @@ class ApplicationController < ActionController::Base
     posts_path
   end
 
+  def default_meta_tags
+    {
+      site: "MountRail",
+      title: "スキー場をさがそう",
+      description: "MountRailはスキー場を検索できるアプリです。",
+      og: {
+        site_name: "MountRail",
+        title: "スキー場をさがそう",
+        description: "MountRailはスキー場を検索できるアプリです。",
+        type: "website",
+        url: request.original_url,
+        image: ActionController::Base.helpers.image_url("ogp.png")
+      },
+      twitter: {
+        card: "summary_large_image",
+      }
+    }
+  end
+
+
   protected
 
   def configure_permitted_parameters

@@ -4,10 +4,43 @@ class PostsController < ApplicationController
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result.includes(:user)
+
+    set_meta_tags(
+      title: "掲示板一覧",
+      description: "みんなの投稿を一覧で確認できます。",
+      og: {
+        title: "掲示板一覧",
+        description: "みんなの投稿を一覧で確認できます。",
+        image: view_context.image_url("ogp.png"),
+        url: request.original_url
+      },
+      twitter: {
+        card: "summary_large_image",
+        image: view_context.image_url("ogp.png")
+      }
+    )
   end
 
   def show
     @post = Post.find(params[:id])
+
+    set_meta_tags(
+      title:       @post.title,
+      description: @post.body.truncate(160),
+      og: {
+        title:       @post.title,
+        description: @post.body.truncate(160),
+        type:        'article',
+        url:         request.original_url,
+        image:       @post.image.attached? ? url_for(@post.image) : view_context.image_url("ogp.png")
+      },
+      twitter: {
+        card:        "summary_large_image",
+        title:       @post.title,
+        description: @post.body.truncate(160),
+        image:       @post.image.attached? ? url_for(@post.image) : view_context.image_url("ogp.png")
+      }
+    )
   end
 
   def new
