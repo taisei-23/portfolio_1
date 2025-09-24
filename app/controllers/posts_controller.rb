@@ -21,6 +21,14 @@ class PostsController < ApplicationController
     )
   end
 
+  def autocomplete
+    query = params[:q].to_s.strip
+    return render json: [] if query.blank?
+
+    @posts = Post.ransack(title_or_body_cont: query).result(distinct: true).limit(5)
+    render json: @posts.map { |post| { id: post.id, title: post.title, body: post.body.truncate(100) } }
+  end
+
   def show
     @post = Post.find(params[:id])
 
@@ -30,7 +38,7 @@ class PostsController < ApplicationController
       og: {
         title:       @post.title,
         description: @post.body.truncate(160),
-        type:        'article',
+        type:        "article",
         url:         request.original_url,
         image:       @post.image.attached? ? url_for(@post.image) : view_context.image_url("ogp.png")
       },

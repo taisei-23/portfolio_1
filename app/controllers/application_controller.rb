@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
         image: ActionController::Base.helpers.image_url("ogp.png")
       },
       twitter: {
-        card: "summary_large_image",
+        card: "summary_large_image"
       }
     }
   end
