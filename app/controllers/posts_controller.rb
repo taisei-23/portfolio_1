@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.includes(:user)
+    @posts = @q.result.includes(:user, image_attachment: :blob)
 
     set_meta_tags(
       title: "掲示板一覧",

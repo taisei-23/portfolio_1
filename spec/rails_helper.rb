@@ -44,7 +44,7 @@ def mock_google_auth(uid: '12345', email: 'test@example.com')
     provider: 'google_oauth2',
     uid: uid,
     info: {
-      email: email,
+      email: 'test_user@example.com',
       name: 'テストユーザー'
     }
   )

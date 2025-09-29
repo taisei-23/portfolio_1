@@ -16,8 +16,13 @@ development:
   host: db
 
 test:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: app_test
+  username: postgres
+  password: postgres
+  host: db
 
 production:
   <<: *default
