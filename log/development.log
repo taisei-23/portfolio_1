@@ -65353,3 +65353,1342 @@ Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.2
 ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
   
 [dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.18.0.1 at 2025-09-29 15:48:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = '85db9321-b236-4d2a-9a03-8626e6cd9677' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in `index'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 30ms (ActiveRecord: 19.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2025-09-29 15:48:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `privacy_path' for #<ActionView::Base:0x00000000011968>)
+Caused by: NameError (undefined local variable or method `privacy_path' for #<ActionView::Base:0x00000000011968>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `privacy_path' for #<ActionView::Base:0x00000000011968>):
+    3:     <p class="text-center text-black">Copyright © 2025. Taisei Suzuki</p>
+    4:     <div class="flex space-x-4">
+    5:       <%= link_to "利用規約", terms_path, class: "text-black hover:underline" %>
+    6:       <%= link_to "プライバシーポリシー", privacy_path, class: "text-black hover:underline" %>
+    7:     </div>
+    8:   </div>
+    9: </footer>
+  
+app/views/shared/_footer.html.erb:6
+app/views/layouts/application.html.erb:48
+
+Information for cause: NameError (undefined local variable or method `privacy_path' for #<ActionView::Base:0x00000000011968>):
+  
+app/views/shared/_footer.html.erb:6
+app/views/layouts/application.html.erb:48
+Started GET "/favicon.ico" for 172.18.0.1 at 2025-09-29 15:48:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/sign_in" for 172.18.0.1 at 2025-09-29 15:48:48 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 1.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 172.18.0.1 at 2025-09-29 15:48:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/users/auth/google_oauth2/callback?state=18c522ff1504aa8c3b3414d8219e4b1e2c10ce9422d52a01&code=4%2F0AVGzR1BfNgs67aCbrnM4kyF_mP503U8bd7LSXteU-kBoOcxsSMm8hUxe1xp_Kq9LlwJs_Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 172.18.0.1 at 2025-09-29 15:48:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"18c522ff1504aa8c3b3414d8219e4b1e2c10ce9422d52a01", "code"=>"4/0AVGzR1BfNgs67aCbrnM4kyF_mP503U8bd7LSXteU-kBoOcxsSMm8hUxe1xp_Kq9LlwJs_Q", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '104595043311381436900' ORDER BY "users"."id" ASC LIMIT 1 /*action='google_oauth2',application='App',controller='omniauth_callbacks'*/[0m
+  ↳ app/models/user.rb:7:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='google_oauth2',application='App',controller='omniauth_callbacks'*/[0m
+  ↳ app/models/user.rb:7:in `from_omniauth'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'szktisi13@gmail.com' LIMIT 1 /*action='google_oauth2',application='App',controller='omniauth_callbacks'*/[0m
+  ↳ app/models/user.rb:7:in `from_omniauth'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "created_at", "updated_at") VALUES ('鈴木泰世', 'szktisi13@gmail.com', '$2a$12$BbaWeiy3s2eH7WVD1TeII.iJWsjLn3C9HHUhG84dA0TVrFgwlE4hm', NULL, NULL, NULL, 'google_oauth2', '104595043311381436900', '2025-09-29 15:48:54.537239', '2025-09-29 15:48:54.537239') RETURNING "id" /*action='google_oauth2',application='App',controller='omniauth_callbacks'*/[0m
+  ↳ app/models/user.rb:7:in `from_omniauth'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*action='google_oauth2',application='App',controller='omniauth_callbacks'*/[0m
+  ↳ app/models/user.rb:7:in `from_omniauth'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 157ms (ActiveRecord: 3.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for 172.18.0.1 at 2025-09-29 15:48:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 7.0ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 3.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:48:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:48:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.4ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/posts" for 172.18.0.1 at 2025-09-29 15:49:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 4.9ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.1ms)
+Completed 200 OK in 20ms (Views: 6.4ms | ActiveRecord: 4.0ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:49:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.8ms | GC: 0.4ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.4ms)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:49:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.1ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.5ms | GC: 0.2ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.7ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:50:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 4.8ms | GC: 3.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 3.1ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 3.8ms (2 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.5ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:50:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.1ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:50:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.1ms)
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.1ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:50:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.7ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2025-09-29 15:52:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in `index'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/posts" for 172.18.0.1 at 2025-09-29 15:52:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 7.1ms | ActiveRecord: 2.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 4.4ms | GC: 2.7ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 2.7ms)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.0ms | GC: 0.4ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.6ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.9ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.2ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.2ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | GC: 0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.2ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | GC: 0.3ms)
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 4.0ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.2ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:52:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:52:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:53:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.3ms | GC: 0.1ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.2ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.4ms)
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:54:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 4.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:54:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:54:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:54:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.7ms | GC: 0.3ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.6ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:54:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.0ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | GC: 0.3ms)
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:55:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.2ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:55:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:55:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.5ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | GC: 0.5ms)
+Completed 200 OK in 21ms (Views: 11.6ms | ActiveRecord: 4.2ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:55:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 4.9ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 9.0ms | ActiveRecord: 4.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/how_to_use" for 172.18.0.1 at 2025-09-29 15:55:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#how_to_use as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/how_to_use.html.erb within layouts/application
+  Rendered pages/how_to_use.html.erb within layouts/application (Duration: 10.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:55:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 6.0ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | GC: 0.6ms)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 4.3ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:55:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 4.6ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:56:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 6.1ms | GC: 0.3ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 0.5ms)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 4.1ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:56:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.7ms | GC: 0.4ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 1.2ms)
+Completed 200 OK in 25ms (Views: 13.1ms | ActiveRecord: 3.8ms (2 queries, 0 cached) | GC: 6.3ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:56:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.8ms | GC: 0.2ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/terms" for 172.18.0.1 at 2025-09-29 15:56:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms.html.erb within layouts/application
+  Rendered pages/terms.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='terms',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.3ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:56:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:56:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | GC: 0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.3ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.9ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `privacy_path' for #<ActionView::Base:0x0000000006e938>)
+Caused by: NameError (undefined local variable or method `privacy_path' for #<ActionView::Base:0x0000000006e938>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `privacy_path' for #<ActionView::Base:0x0000000006e938>):
+    4:     <span class="mx-2">|</span>
+    5:     <%= link_to "利用規約", terms_path, class: "text-black hover:underline mx-1" %>
+    6:     <span>|</span>
+    7:     <%= link_to "プライバシーポリシー", privacy_path, class: "text-black hover:underline mx-1" %>
+    8:   </div>
+    9: </footer>
+  
+app/views/shared/_footer.html.erb:7
+app/views/layouts/application.html.erb:48
+
+Information for cause: NameError (undefined local variable or method `privacy_path' for #<ActionView::Base:0x0000000006e938>):
+  
+app/views/shared/_footer.html.erb:7
+app/views/layouts/application.html.erb:48
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:56:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 5.1ms | GC: 0.3ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 0.4ms)
+Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/" for 172.18.0.1 at 2025-09-29 15:57:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in `index'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for 172.18.0.1 at 2025-09-29 15:57:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 172.18.0.1 at 2025-09-29 15:57:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='home'*/[0m
+  ↳ app/controllers/home_controller.rb:3:in `index'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for 172.18.0.1 at 2025-09-29 15:57:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/profile/edit" for 172.18.0.1 at 2025-09-29 15:57:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfilesController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='App',controller='profiles'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='edit',application='App',controller='profiles'*/[0m
+  ↳ app/views/profiles/edit.html.erb:6
+  Rendered profiles/edit.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/privacy_policy" for 172.18.0.1 at 2025-09-29 15:57:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='privacy_policy',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 3.0ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 3.0ms)
+
+
+Started DELETE "/users/sign_out" for 172.18.0.1 at 2025-09-29 16:05:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='destroy',application='App',controller='sessions'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 18ms (ActiveRecord: 5.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/" for 172.18.0.1 at 2025-09-29 16:05:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2025-09-29 16:05:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | GC: 0.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.1ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.2ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/auth/google_oauth2" for 172.18.0.1 at 2025-09-29 16:05:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/users/auth/google_oauth2/callback?state=1413a8497cd14c0a0bcfad6651c1b541a5ca4c87d572b361&code=4%2F0AVGzR1AGBzeRKQX2YhxwzXOeWLRWBZxnuDipTnbNGhiYQI42aLkrxG_dciX5pnNPC2XNiA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 172.18.0.1 at 2025-09-29 16:05:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"1413a8497cd14c0a0bcfad6651c1b541a5ca4c87d572b361", "code"=>"4/0AVGzR1AGBzeRKQX2YhxwzXOeWLRWBZxnuDipTnbNGhiYQI42aLkrxG_dciX5pnNPC2XNiA", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '104595043311381436900' ORDER BY "users"."id" ASC LIMIT 1 /*action='google_oauth2',application='App',controller='omniauth_callbacks'*/[0m
+  ↳ app/models/user.rb:7:in `from_omniauth'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts" for 172.18.0.1 at 2025-09-29 16:05:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.1ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='index',application='App',controller='posts'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.2ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/facilities" for 172.18.0.1 at 2025-09-29 16:05:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by FacilitiesController#search as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."name" IS NULL LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/controllers/facilities_controller.rb:3:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering facilities/search.html.erb within layouts/application
+  Rendered facilities/search.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.4ms)
+Completed 200 OK in 163ms (Views: 10.2ms | ActiveRecord: 3.4ms (3 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/mountain" for 172.18.0.1 at 2025-09-29 16:05:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MountainController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mountain/search.html.erb within layouts/application
+  Rendered mountain/search.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.2ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/facilities" for 172.18.0.1 at 2025-09-29 16:05:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by FacilitiesController#search as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."name" IS NULL LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/controllers/facilities_controller.rb:3:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering facilities/search.html.erb within layouts/application
+  Rendered facilities/search.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.4ms)
+Completed 200 OK in 139ms (Views: 9.5ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/facilities" for 172.18.0.1 at 2025-09-29 16:05:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by FacilitiesController#search as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."name" IS NULL LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/controllers/facilities_controller.rb:3:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering facilities/search.html.erb within layouts/application
+  Rendered facilities/search.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.6ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.4ms)
+Completed 200 OK in 285ms (Views: 6.3ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/mountain" for 172.18.0.1 at 2025-09-29 16:05:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MountainController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mountain/search.html.erb within layouts/application
+  Rendered mountain/search.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 1.0ms)
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/mountain" for 172.18.0.1 at 2025-09-29 16:05:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MountainController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mountain/search.html.erb within layouts/application
+  Rendered mountain/search.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.5ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 3.0ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/facilities" for 172.18.0.1 at 2025-09-29 16:05:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by FacilitiesController#search as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."name" IS NULL LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/controllers/facilities_controller.rb:3:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering facilities/search.html.erb within layouts/application
+  Rendered facilities/search.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.7ms | GC: 0.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | GC: 0.9ms)
+Completed 200 OK in 295ms (Views: 10.8ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/facilities" for 172.18.0.1 at 2025-09-29 16:05:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by FacilitiesController#search as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."name" IS NULL LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/controllers/facilities_controller.rb:3:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering facilities/search.html.erb within layouts/application
+  Rendered facilities/search.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='facilities'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | GC: 0.2ms)
+Completed 200 OK in 295ms (Views: 8.6ms | ActiveRecord: 1.6ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/mountain" for 172.18.0.1 at 2025-09-29 16:05:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MountainController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mountain/search.html.erb within layouts/application
+  Rendered mountain/search.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/mountain" for 172.18.0.1 at 2025-09-29 16:05:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MountainController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mountain/search.html.erb within layouts/application
+  Rendered mountain/search.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'd5e1eff9-d1ac-4ab1-a493-78bc4a962a9e' ORDER BY "users"."id" ASC LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = NULL AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='search',application='App',controller='mountain'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:5
+  Rendered shared/_sidebar.html.erb (Duration: 2.1ms | GC: 0.6ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.8ms)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.8ms)
+
+

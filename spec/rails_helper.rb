@@ -39,12 +39,12 @@ RSpec.configure do |config|
   OmniAuth.config.test_mode = true
 end
 
-def mock_google_auth(uid: '12345', email: 'test@example.com')
+def mock_google_auth(uid: '12345', email: 'test_user@example.com')
   OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(
     provider: 'google_oauth2',
     uid: uid,
     info: {
-      email: 'test_user@example.com',
+      email: email,
       name: 'テストユーザー'
     }
   )

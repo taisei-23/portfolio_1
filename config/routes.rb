@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get "up", to: "rails/health#show", as: :rails_health_check
   get "how_to_use", to: "pages#how_to_use", as: :how_to_use
+  get "terms", to: "pages#terms", as: :terms
+  get "privacy_policy", to: "pages#privacy_policy", as: :privacy_policy
 
   resources :posts do
     collection do
