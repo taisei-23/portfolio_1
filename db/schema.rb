@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_20_063409) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_04_174755) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
@@ -18,7 +18,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_20_063409) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.bigint "record_id", null: false
+    t.uuid "record_id", null: false
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_20_063409) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.uuid "user_id", null: false
-    t.bigint "post_id", null: false
+    t.uuid "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_bookmarks_on_post_id"
@@ -56,7 +56,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_20_063409) do
   create_table "comments", force: :cascade do |t|
     t.text "body"
     t.uuid "user_id", null: false
-    t.bigint "post_id", null: false
+    t.uuid "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
@@ -84,7 +84,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_20_063409) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.datetime "created_at", null: false

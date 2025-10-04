@@ -4,7 +4,7 @@
     <div class="mb-6"><br>
       <div class="flex items-center mb-3">
         <% if current_user.icon_image.attached? %>
-          <%= image_tag current_user.icon_image.variant(resize_to_limit: [40, 40]), class: "rounded-full mr-2" %>
+          <%= image_tag current_user.icon_image, class: "rounded-full mr-2", size: "40x40" %>
         <% else %>
           <%= image_tag "default_icon.png", width: 40, height: 40, class: "rounded-full mr-2" %>
         <% end %>

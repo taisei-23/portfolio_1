@@ -2,7 +2,7 @@
      data-controller="slide-in">
   <div class="flex items-center mb-2 p-2">
     <% if post.user.icon_image.attached? %>
-      <%= image_tag post.user.icon_image.variant(resize_to_limit: [40, 40]), class: "rounded-full mr-2" %>
+      <%= image_tag post.user.icon_image, class: "rounded-full mr-2", size: "40x40" %>
     <% else %>
       <%= image_tag "default_icon.png", class: "rounded-full mr-2", size: "40x40" %>
     <% end %>
@@ -19,7 +19,7 @@
 
   <% if post.image.attached? %>
     <div class="mb-2">
-      <%= image_tag post.image.variant(resize_to_limit: [600, nil]), class: "w-full h-auto rounded" %>
+      <%= image_tag post.image, class: "w-full h-auto rounded max-w-full" %>
     </div>
   <% end %>
 

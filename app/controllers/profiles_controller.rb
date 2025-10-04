@@ -8,6 +8,7 @@ class ProfilesController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
+      Rails.logger.info "User ID: #{@user.id}, persisted?: #{@user.persisted?}, errors: #{@user.errors.full_messages}"
      redirect_to edit_profile_path, notice: "プロフィールを更新しました"
     else
       flash.now[:alert] = "プロフィールの更新に失敗しました"
