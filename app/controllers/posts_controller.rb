@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :check_post_owner, only: [:edit, :update, :destroy]
 
   def index
     @q = Post.ransack(params[:q])
@@ -30,8 +32,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-
     set_meta_tags(
       title:       @post.title,
       description: @post.body.truncate(160),
@@ -66,27 +66,32 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
-    unless @post.user == current_user
-      redirect_to @post, alert: "他人の投稿は編集できません"
+    unless @post&.persisted?
+      redirect_to posts_path, alert: "投稿が見つかりません"
       return
     end
 
-    if @post.update(post_params)
-      redirect_to @post, notice: "更新しました"
-    else
-      render :edit
+    begin
+      if @post.update(post_params)
+        redirect_to posts_path, notice: "更新しました"
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    rescue => e
+      redirect_to posts_path, alert: "更新中にエラーが発生しました"
     end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path, notice: "削除しました"
+    begin
+      @post.destroy
+      redirect_to posts_path, notice: "削除しました", status: :see_other
+    rescue => e
+      redirect_to posts_path
+    end
   end
 
   def search
@@ -100,6 +105,22 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def set_post
+    @post = Post.find_by(id: params[:id])
+    unless @post
+      Rails.logger.error "Post not found with id: #{params[:id]}"
+      redirect_to posts_path, alert: "投稿が見つかりません"
+      return
+    end
+  end
+
+  def check_post_owner
+    unless @post&.user == current_user
+      redirect_to posts_path, alert: "権限がありません"
+      return
+    end
+  end
 
   def post_params
     params.require(:post).permit(:title, :body, :image)

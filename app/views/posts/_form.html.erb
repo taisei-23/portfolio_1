@@ -1,4 +1,4 @@
-<%= form_with model: post, local: true do |f| %>
+<%= form_with model: @post, local: true do |f| %>
 
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
@@ -10,12 +10,20 @@
     <%= f.text_area :body, class: "border border-gray-300 rounded p-2 w-full h-32" %>
   </div>
 
-	<div class="field">
-  	<%= f.label :image, "画像" %><br />
+  <div class="field">
+    <%= f.label :image, "画像" %><br />
     <%= f.file_field :image, class: "border border-gray-300 rounded p-2" %>
+
+    <% if @post&.persisted? && @post.image&.attached? %>
+      <div class="mt-2">
+        <p class="text-sm text-gray-600">現在の画像:</p>
+        <%= image_tag @post.image, class: "max-w-xs h-auto rounded border" %>
+      </div>
+    <% end %>
   </div>
   <br />
-	<div class="actions">
-		<%= f.submit "投稿", class: "bg-blue-600 text-white rounded px-3 py-1" %>
-	</div>
+  
+  <div class="actions">
+    <%= f.submit "投稿", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+  </div>
 <% end %>

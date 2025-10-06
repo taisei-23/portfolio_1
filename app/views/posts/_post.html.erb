@@ -2,7 +2,7 @@
      data-controller="slide-in">
   <div class="flex items-center mb-2 p-2">
     <% if post.user.icon_image.attached? %>
-      <%= image_tag post.user.icon_image, class: "rounded-full mr-2", size: "40x40" %>
+      <%= image_tag url_for(post.user.icon_image), class: "rounded-full mr-2", size: "40x40" %>
     <% else %>
       <%= image_tag "default_icon.png", class: "rounded-full mr-2", size: "40x40" %>
     <% end %>
