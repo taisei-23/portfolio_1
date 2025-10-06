@@ -87906,3 +87906,581 @@ Processing by MountainController#search as HTML
 Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.5ms)
 
 
+[dotenv] Set [36mHERE_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, [36mGOOGLE_CLIENT_ID[0m, [36mGOOGLE_CLIENT_SECRET[0m, and [36mSENDGRID_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveStorage::Attachment Delete All (0.6ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" /*application='App'*/[0m
+  [1m[36mActiveStorage::Blob Delete All (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveStorage::Attachment Delete All (0.6ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" /*application='App'*/[0m
+  [1m[36mActiveStorage::Blob Delete All (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+Migrating to ChangeActiveStorageRecordIdToUuid (20251004163533)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (27.9ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ALTER COLUMN "record_id" TYPE uuid USING record_id::text::uuid /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251004163533') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+Migrating to ConvertPostsIdToUuid (20251004174755)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_d8b54790ff" /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "comments" DROP CONSTRAINT "fk_rails_2fd19c0db7" /*application='App'*/[0m
+  [1m[35m (13.6ms)[0m  [1m[35mTRUNCATE TABLE bookmarks CASCADE /*application='App'*/[0m
+  [1m[35m (13.0ms)[0m  [1m[35mTRUNCATE TABLE comments CASCADE /*application='App'*/[0m
+  [1m[35m (9.9ms)[0m  [1m[35mTRUNCATE TABLE posts CASCADE /*application='App'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "posts" DROP COLUMN "id" /*application='App'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "id" bigint NOT NULL /*application='App'*/[0m
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE posts ADD PRIMARY KEY (id); /*application='App'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE SEQUENCE IF NOT EXISTS posts_id_seq; /*application='App'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER SEQUENCE posts_id_seq RESTART WITH 1; /*application='App'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE posts ALTER COLUMN id SET DEFAULT nextval('posts_id_seq'); /*application='App'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "bookmarks" ALTER COLUMN "post_id" TYPE bigint /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+Migrating to ConvertPostsIdToUuid (20251004174755)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_d8b54790ff" /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "comments" DROP CONSTRAINT "fk_rails_2fd19c0db7" /*application='App'*/[0m
+  [1m[35m (15.9ms)[0m  [1m[35mTRUNCATE TABLE bookmarks CASCADE /*application='App'*/[0m
+  [1m[35m (12.3ms)[0m  [1m[35mTRUNCATE TABLE comments CASCADE /*application='App'*/[0m
+  [1m[35m (9.1ms)[0m  [1m[35mTRUNCATE TABLE posts CASCADE /*application='App'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "posts" DROP COLUMN "id" /*application='App'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "id" bigint NOT NULL /*application='App'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE posts ADD PRIMARY KEY (id); /*application='App'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE SEQUENCE IF NOT EXISTS posts_id_seq; /*application='App'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER SEQUENCE posts_id_seq RESTART WITH 1; /*application='App'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE posts ALTER COLUMN id SET DEFAULT nextval('posts_id_seq'); /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "bookmarks" ALTER COLUMN "post_id" TYPE bigint /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='App'*/[0m
+  [1m[35m (61.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "snow_mountain_app_development" /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='App'*/[0m
+  [1m[35m (144.6ms)[0m  [1m[35mCREATE DATABASE "snow_mountain_app_development" ENCODING = 'unicode' /*application='App'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='App'*/[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0) /*application='App'*/[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-10-06 06:29:46.515667', '2025-10-06 06:29:46.515669') RETURNING "key" /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '9c6777daaa6ce85cc74b26c38000144a7834a947', '2025-10-06 06:29:46.519212', '2025-10-06 06:29:46.519213') RETURNING "key" /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+Migrating to EnableUuid (20250601000000)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35mSQL (6.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "pgcrypto" /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250601000000') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateActiveStorageTables (20250601094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='App'*/[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" uuid NOT NULL, "blob_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='App'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='App'*/[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "blob_id" uuid NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250601094621') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateUsers (20250605144513)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250605144513') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to RemovePasswordDigestFromUsers (20250605161649)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "password_digest" /*application='App'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='App'*/[0m
+  [1m[35m (35.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "snow_mountain_app_development" /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='App'*/[0m
+  [1m[35m (39.2ms)[0m  [1m[35mCREATE DATABASE "snow_mountain_app_development" ENCODING = 'unicode' /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='App'*/[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0) /*application='App'*/[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-10-06 06:30:58.584202', '2025-10-06 06:30:58.584203') RETURNING "key" /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '9c6777daaa6ce85cc74b26c38000144a7834a947', '2025-10-06 06:30:58.587329', '2025-10-06 06:30:58.587330') RETURNING "key" /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+Migrating to EnableUuid (20250601000000)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "pgcrypto" /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250601000000') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateActiveStorageTables (20250601094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='App'*/[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" uuid NOT NULL, "blob_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='App'*/[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "blob_id" uuid NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250601094621') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateUsers (20250605144513)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250605144513') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreatePosts (20250616072143)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "posts" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid NOT NULL, "title" character varying NOT NULL, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE INDEX "index_posts_on_user_id" ON "posts" ("user_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250616072143') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateComments (20250622154834)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "body" text NOT NULL, "user_id" uuid NOT NULL, "post_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id") /*application='App'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250622154834') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateMountains (20250626104647)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "place_id" character varying, "name" character varying, "latitude" float, "longitude" float, "address" character varying, "rating" float, "user_ratings_total" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250626104647') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateMountainSearches (20250626104700)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "mountain_searches" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid NOT NULL, "mountain_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_0791eda28a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_5b655f1c27"
+FOREIGN KEY ("mountain_id")
+  REFERENCES "mountains" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE INDEX "index_mountain_searches_on_user_id" ON "mountain_searches" ("user_id") /*application='App'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_mountain_searches_on_mountain_id" ON "mountain_searches" ("mountain_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250626104700') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to AddOmniauthToUsers (20250820082221)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying /*application='App'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250820082221') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateBookmarks (20250822153203)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid NOT NULL, "post_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c1ff6fa4ac"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_d8b54790ff"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_user_id" ON "bookmarks" ("user_id") /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_post_id" ON "bookmarks" ("post_id") /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_bookmarks_on_user_id_and_post_id" ON "bookmarks" ("user_id", "post_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250822153203') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to RecreateUsersWithUuidAndOmniauth (20250920063409)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_c1ff6fa4ac" /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "comments" DROP CONSTRAINT "fk_rails_03de2dc08c" /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "mountain_searches" DROP CONSTRAINT "fk_rails_0791eda28a" /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" DROP CONSTRAINT "fk_rails_5b5ddfd518" /*application='App'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_d8b54790ff" /*application='App'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "users" /*application='App'*/[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "provider" character varying, "uid" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='App'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='App'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_provider_and_uid" ON "users" ("provider", "uid") /*application='App'*/[0m
+  [1m[35m (11.0ms)[0m  [1m[35mTRUNCATE TABLE bookmarks CASCADE /*application='App'*/[0m
+  [1m[35m (14.2ms)[0m  [1m[35mALTER TABLE "bookmarks" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD CONSTRAINT "fk_rails_c1ff6fa4ac"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (11.6ms)[0m  [1m[35mTRUNCATE TABLE comments CASCADE /*application='App'*/[0m
+  [1m[35m (12.8ms)[0m  [1m[35mALTER TABLE "comments" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (8.0ms)[0m  [1m[35mTRUNCATE TABLE mountain_searches CASCADE /*application='App'*/[0m
+  [1m[35m (8.9ms)[0m  [1m[35mALTER TABLE "mountain_searches" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "mountain_searches" ADD CONSTRAINT "fk_rails_0791eda28a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (26.6ms)[0m  [1m[35mTRUNCATE TABLE posts CASCADE /*application='App'*/[0m
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "posts" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD CONSTRAINT "fk_rails_d8b54790ff"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250920063409') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to ChangeActiveStorageRecordIdToUuid (20251004163533)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mActiveStorage::Attachment Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments" /*application='App'*/[0m
+  [1m[36mActiveStorage::Blob Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs" /*application='App'*/[0m
+  [1m[36mActiveStorage::VariantRecord Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_variant_records" /*application='App'*/[0m
+  [1m[36mActiveStorage::Attachment Delete All (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" /*application='App'*/[0m
+  [1m[36mActiveStorage::Blob Delete All (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" /*application='App'*/[0m
+  [1m[36mActiveStorage::VariantRecord Delete All (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" /*application='App'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records" /*application='App'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "active_storage_attachments" /*application='App'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "active_storage_blobs" /*application='App'*/[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='App'*/[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" uuid NOT NULL, "blob_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='App'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='App'*/[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "blob_id" uuid NOT NULL, "variation_digest" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251004163533') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to ConvertPostsIdToUuid (20251004174755)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_d8b54790ff" /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comments" DROP CONSTRAINT "fk_rails_2fd19c0db7" /*application='App'*/[0m
+  [1m[35m (12.7ms)[0m  [1m[35mTRUNCATE TABLE bookmarks CASCADE /*application='App'*/[0m
+  [1m[35m (11.3ms)[0m  [1m[35mTRUNCATE TABLE comments CASCADE /*application='App'*/[0m
+  [1m[35m (7.9ms)[0m  [1m[35mTRUNCATE TABLE posts CASCADE /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" DROP COLUMN "id" /*application='App'*/[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "id" uuid DEFAULT gen_random_uuid() NOT NULL /*application='App'*/[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE posts ADD PRIMARY KEY (id); /*application='App'*/[0m
+  [1m[35m (12.5ms)[0m  [1m[35mALTER TABLE "bookmarks" ALTER COLUMN "post_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (12.3ms)[0m  [1m[35mALTER TABLE "comments" ALTER COLUMN "post_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD CONSTRAINT "fk_rails_d8b54790ff"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251004174755') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mUser Count (12.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" /*application='App'*/[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1 /*application='App'*/[0m
+[dotenv] Set [36mHERE_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, [36mGOOGLE_CLIENT_ID[0m, [36mGOOGLE_CLIENT_SECRET[0m, and [36mSENDGRID_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='App'*/[0m
+  [1m[35m (37.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "snow_mountain_app_development" /*application='App'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='App'*/[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCREATE DATABASE "snow_mountain_app_development" ENCODING = 'unicode' /*application='App'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='App'*/[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0) /*application='App'*/[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-10-06 06:34:01.494209', '2025-10-06 06:34:01.494211') RETURNING "key" /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '9c6777daaa6ce85cc74b26c38000144a7834a947', '2025-10-06 06:34:01.497396', '2025-10-06 06:34:01.497397') RETURNING "key" /*application='App'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+Migrating to EnableUuid (20250601000000)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "pgcrypto" /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250601000000') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateActiveStorageTables (20250601094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='App'*/[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" uuid NOT NULL, "blob_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='App'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='App'*/[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "blob_id" uuid NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250601094621') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateUsers (20250605144513)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250605144513') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreatePosts (20250616072143)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "posts" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid NOT NULL, "title" character varying NOT NULL, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE INDEX "index_posts_on_user_id" ON "posts" ("user_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250616072143') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateComments (20250622154834)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "body" text NOT NULL, "user_id" uuid NOT NULL, "post_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id") /*application='App'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250622154834') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateMountains (20250626104647)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "place_id" character varying, "name" character varying, "latitude" float, "longitude" float, "address" character varying, "rating" float, "user_ratings_total" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250626104647') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateMountainSearches (20250626104700)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "mountain_searches" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid NOT NULL, "mountain_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_0791eda28a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_5b655f1c27"
+FOREIGN KEY ("mountain_id")
+  REFERENCES "mountains" ("id")
+) /*application='App'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_mountain_searches_on_user_id" ON "mountain_searches" ("user_id") /*application='App'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_mountain_searches_on_mountain_id" ON "mountain_searches" ("mountain_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250626104700') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to AddOmniauthToUsers (20250820082221)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying /*application='App'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250820082221') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to CreateBookmarks (20250822153203)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid NOT NULL, "post_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c1ff6fa4ac"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_d8b54790ff"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_user_id" ON "bookmarks" ("user_id") /*application='App'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_post_id" ON "bookmarks" ("post_id") /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_bookmarks_on_user_id_and_post_id" ON "bookmarks" ("user_id", "post_id") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250822153203') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to RecreateUsersWithUuidAndOmniauth (20250920063409)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_c1ff6fa4ac" /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "comments" DROP CONSTRAINT "fk_rails_03de2dc08c" /*application='App'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "mountain_searches" DROP CONSTRAINT "fk_rails_0791eda28a" /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "posts" DROP CONSTRAINT "fk_rails_5b5ddfd518" /*application='App'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_d8b54790ff" /*application='App'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "users" /*application='App'*/[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "provider" character varying, "uid" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='App'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='App'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_provider_and_uid" ON "users" ("provider", "uid") /*application='App'*/[0m
+  [1m[35m (9.4ms)[0m  [1m[35mTRUNCATE TABLE bookmarks CASCADE /*application='App'*/[0m
+  [1m[35m (11.5ms)[0m  [1m[35mALTER TABLE "bookmarks" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD CONSTRAINT "fk_rails_c1ff6fa4ac"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (10.3ms)[0m  [1m[35mTRUNCATE TABLE comments CASCADE /*application='App'*/[0m
+  [1m[35m (14.4ms)[0m  [1m[35mALTER TABLE "comments" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (8.1ms)[0m  [1m[35mTRUNCATE TABLE mountain_searches CASCADE /*application='App'*/[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "mountain_searches" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "mountain_searches" ADD CONSTRAINT "fk_rails_0791eda28a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (25.5ms)[0m  [1m[35mTRUNCATE TABLE posts CASCADE /*application='App'*/[0m
+  [1m[35m (9.0ms)[0m  [1m[35mALTER TABLE "posts" ALTER COLUMN "user_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='App'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD CONSTRAINT "fk_rails_d8b54790ff"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250920063409') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to ChangeActiveStorageRecordIdToUuid (20251004163533)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[36mActiveStorage::Attachment Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments" /*application='App'*/[0m
+  [1m[36mActiveStorage::Blob Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs" /*application='App'*/[0m
+  [1m[36mActiveStorage::VariantRecord Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_variant_records" /*application='App'*/[0m
+  [1m[36mActiveStorage::Attachment Delete All (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" /*application='App'*/[0m
+  [1m[36mActiveStorage::Blob Delete All (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" /*application='App'*/[0m
+  [1m[36mActiveStorage::VariantRecord Delete All (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records" /*application='App'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records" /*application='App'*/[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "active_storage_attachments" /*application='App'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "active_storage_blobs" /*application='App'*/[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL) /*application='App'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='App'*/[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" uuid NOT NULL, "blob_id" uuid NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='App'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='App'*/[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "blob_id" uuid NOT NULL, "variation_digest" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='App'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251004163533') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+Migrating to ConvertPostsIdToUuid (20251004174755)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='App'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "bookmarks" DROP CONSTRAINT "fk_rails_d8b54790ff" /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comments" DROP CONSTRAINT "fk_rails_2fd19c0db7" /*application='App'*/[0m
+  [1m[35m (11.4ms)[0m  [1m[35mTRUNCATE TABLE bookmarks CASCADE /*application='App'*/[0m
+  [1m[35m (10.3ms)[0m  [1m[35mTRUNCATE TABLE comments CASCADE /*application='App'*/[0m
+  [1m[35m (8.7ms)[0m  [1m[35mTRUNCATE TABLE posts CASCADE /*application='App'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "posts" DROP COLUMN "id" /*application='App'*/[0m
+  [1m[35m (7.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "id" uuid DEFAULT gen_random_uuid() NOT NULL /*application='App'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE posts ADD PRIMARY KEY (id); /*application='App'*/[0m
+  [1m[35m (12.1ms)[0m  [1m[35mALTER TABLE "bookmarks" ALTER COLUMN "post_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (11.6ms)[0m  [1m[35mALTER TABLE "comments" ALTER COLUMN "post_id" TYPE uuid USING gen_random_uuid() /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD CONSTRAINT "fk_rails_d8b54790ff"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ /*application='App'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251004174755') RETURNING "version" /*application='App'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+[dotenv] Set [36mHERE_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, [36mGOOGLE_CLIENT_ID[0m, [36mGOOGLE_CLIENT_SECRET[0m, and [36mSENDGRID_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='App'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4088588348932663800) /*application='App'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m

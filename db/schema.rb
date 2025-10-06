@@ -15,17 +15,17 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_04_174755) do
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
 
-  create_table "active_storage_attachments", force: :cascade do |t|
+  create_table "active_storage_attachments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.uuid "record_id", null: false
-    t.bigint "blob_id", null: false
+    t.uuid "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", force: :cascade do |t|
+  create_table "active_storage_blobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -37,13 +37,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_04_174755) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
+  create_table "active_storage_variant_records", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "blob_id", null: false
     t.string "variation_digest", null: false
+    t.datetime "created_at", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "bookmarks", force: :cascade do |t|
+  create_table "bookmarks", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "user_id", null: false
     t.uuid "post_id", null: false
     t.datetime "created_at", null: false
@@ -53,8 +54,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_04_174755) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.text "body"
+  create_table "comments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.text "body", null: false
     t.uuid "user_id", null: false
     t.uuid "post_id", null: false
     t.datetime "created_at", null: false
@@ -63,16 +64,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_04_174755) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "mountain_searches", force: :cascade do |t|
+  create_table "mountain_searches", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "user_id", null: false
-    t.bigint "mountain_id", null: false
+    t.uuid "mountain_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["mountain_id"], name: "index_mountain_searches_on_mountain_id"
     t.index ["user_id"], name: "index_mountain_searches_on_user_id"
   end
 
-  create_table "mountains", force: :cascade do |t|
+  create_table "mountains", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "place_id"
     t.string "name"
     t.float "latitude"
@@ -85,11 +86,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_04_174755) do
   end
 
   create_table "posts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "title"
+    t.uuid "user_id", null: false
+    t.string "title", null: false
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.uuid "user_id", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
