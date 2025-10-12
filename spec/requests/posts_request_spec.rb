@@ -94,7 +94,7 @@ RSpec.describe PostsController, type: :request do
           it "編集ページにアクセスできるが後続処理で制限（必要なら追加テスト）" do
             sign_in other_user
             get edit_post_path(post_record)
-            expect(response).to have_http_status(:ok)
+            expect(response).to redirect_to(posts_path)
           end
         end
       end
@@ -103,7 +103,7 @@ RSpec.describe PostsController, type: :request do
         context "投稿者本人の場合" do
           it "投稿が更新されてリダイレクトされる" do
             patch post_path(post_record), params: { post: { title: "更新タイトル" } }
-            expect(response).to redirect_to(post_path(post_record))
+            expect(response).to redirect_to(posts_path)
             follow_redirect!
             expect(response.body).to include("更新しました")
             expect(post_record.reload.title).to eq("更新タイトル")
@@ -115,7 +115,7 @@ RSpec.describe PostsController, type: :request do
 
           it "更新できず投稿詳細にリダイレクトされアラート表示" do
             patch post_path(post_record), params: { post: { title: "不正更新" } }
-            expect(response).to redirect_to(post_path(post_record))
+            expect(response).to redirect_to(posts_path)
             follow_redirect!
           end
         end

@@ -2,7 +2,7 @@ class ConvertPostsIdToUuid < ActiveRecord::Migration[8.0]
   def up
     remove_foreign_key :bookmarks, :posts if foreign_key_exists?(:bookmarks, :posts)
     remove_foreign_key :comments, :posts if foreign_key_exists?(:comments, :posts)
-    
+
     execute "TRUNCATE TABLE bookmarks CASCADE"
     execute "TRUNCATE TABLE comments CASCADE"
     execute "TRUNCATE TABLE posts CASCADE"
@@ -21,7 +21,7 @@ class ConvertPostsIdToUuid < ActiveRecord::Migration[8.0]
   def down
     remove_foreign_key :bookmarks, :posts if foreign_key_exists?(:bookmarks, :posts)
     remove_foreign_key :comments, :posts if foreign_key_exists?(:comments, :posts)
-    
+
     execute "TRUNCATE TABLE bookmarks CASCADE"
     execute "TRUNCATE TABLE comments CASCADE"
     execute "TRUNCATE TABLE posts CASCADE"

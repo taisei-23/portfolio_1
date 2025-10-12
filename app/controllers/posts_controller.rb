@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :check_post_owner, only: [:edit, :update, :destroy]
+  before_action :set_post, only: [ :show, :edit, :update, :destroy ]
+  before_action :check_post_owner, only: [ :edit, :update, :destroy ]
 
   def index
     @q = Post.ransack(params[:q])
@@ -111,14 +111,14 @@ class PostsController < ApplicationController
     unless @post
       Rails.logger.error "Post not found with id: #{params[:id]}"
       redirect_to posts_path, alert: "投稿が見つかりません"
-      return
+      nil
     end
   end
 
   def check_post_owner
     unless @post&.user == current_user
       redirect_to posts_path, alert: "権限がありません"
-      return
+      nil
     end
   end
 
