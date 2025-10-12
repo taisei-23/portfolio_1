@@ -21,8 +21,8 @@
     <%= turbo_include_tags %>
   </head>
 
-  <body class="min-h-screen flex flex-col h-screen">
-    <div data-controller="sidebar">
+  <body class="flex flex-col min-h-screen">
+    <div data-controller="sidebar" class="flex flex-col flex-1">
       <%= render "shared/header" %>
 
       <div class="flex flex-1 overflow-hidden">
@@ -30,8 +30,7 @@
           <%= render "shared/sidebar" %>
         <% end %>
 
-        <main class="flex-1 overflow-y-auto bg-white relative">
-
+        <main class="flex-1 overflow-y-auto bg-white relative flex flex-col">
           <% if flash[:notice].present? %>
             <div class="bg-green-100 text-green-800 p-4 rounded">
               <%= flash[:notice] %>
@@ -42,7 +41,9 @@
               <%= flash[:alert] %>
             </div>
           <% end %>
-          <%= yield %>
+          <div class="flex-1">
+            <%= yield %>
+          </div>
         </main>
       </div>
 

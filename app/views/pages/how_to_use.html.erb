@@ -1,21 +1,81 @@
-<div class="p-6">
-  <h1 class="text-5xl font-bold mb-4">アプリの使い方！</h1>
+<br>
+<div data-controller="swiper">
+  <h1 class="text-5xl font-bold mb-4 text-center">アプリの使い方！①～⑤</h1>
+  <br>
 
-  <ol class="list-decimal pl-6 space-y-2 font-bold text-2xl">
-    <li>掲示板で投稿やコメントを作成できます</li>
-    <li>気に入った投稿に星マークの「ブックマーク」をつけられます</li>
-    <li>雪山検索からスキー場を探せます</li><br>
-    <%= image_tag "mount.webp", alt: "雪山", class: "w-full h-auto" %><br>
-    <li>雪山検索後に経路も検索できます</li><br>
-    <%= image_tag "route.webp", alt: "経路検索", class: "w-full h-auto" %>
-    <p>※料金が表示されない場合は詳細な住所を目的地に入れてください</p><br>
-    <%= image_tag "address.webp", alt: "住所で検索", class: "w-full h-auto" %><br>
-    <%= image_tag "payment.webp", alt: "料金", class: "w-full h-auto" %><br>
-    <li>周辺施設検索機能では、レストランやレンタルショップを検索できます</li><br>
-    <%= image_tag "facility.webp", alt: "周辺施設", class: "w-full h-auto" %><br>
-  </ol>
+  <div class="flex justify-center items-center space-x-6 mt-6">
+    <button class="custom-prev text-3xl font-bold text-gray-700 hover:text-blue-500">
+      <span>◀</span>
+      <span>前へ</span>
+    </button>
+    <button class="custom-next text-3xl font-bold text-gray-700 hover:text-blue-500">
+      <span>次へ</span>
+      <span>▶</span>
+    </button>
+  </div>
 
-  <div class="mt-6">
+  <div class="swiper flex-1" data-swiper-target="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide p-6">
+        <h2 class="text-3xl font-bold mb-2">① 掲示板</h2>
+        <p class="text-xl mb-4 font-bold">掲示板で投稿やコメントを作成できます</p>
+        <p class="text-xl mb-4 font-bold">掲示板では、自分のスノーボード体験や雪山の感想を投稿できます</p>
+        <%= image_tag "post_create.webp", alt: "投稿", class: "w-full h-auto rounded-lg shadow" %>
+        <br>
+        <p class="text-lg font-bold">気になる投稿にはコメントを残して、他のユーザーと交流しましょう</p>
+        <%= image_tag "comment.webp", alt: "コメント", class: "w-full h-auto rounded-lg shadow" %>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide p-6">
+        <h2 class="text-3xl font-bold mb-2">② ブックマーク</h2>
+        <p class="text-xl mb-4 font-bold">気に入った投稿に星マークの「ブックマーク」をつけられます</p>
+        <%= image_tag "bookmark.webp", alt: "ブックマーク", class: "w-full h-auto rounded-lg shadow" %>
+        <p class="mt-4 font-bold">マイページからブックマークした投稿を一覧で見れます</p>
+        <%= image_tag "bookmark_list.webp", alt: "マイページのブックマーク", class: "w-full h-auto rounded-lg shadow" %>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide p-6">
+        <h2 class="text-3xl font-bold mb-2">③ 雪山検索</h2>
+        <p class="text-xl mb-4 font-bold">雪山検索からスキー場を探せます</p>
+        <%= image_tag "mount.webp", alt: "雪山", class: "w-full h-auto rounded-lg shadow" %>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide p-6">
+        <h2 class="text-3xl font-bold mb-2">④ 経路検索</h2>
+        <p class="text-xl mb-4 font-bold">雪山検索後に経路も検索できます</p>
+        <%= image_tag "route.webp", alt: "経路検索", class: "w-full h-auto rounded-lg shadow mb-4" %>
+        <p class="font-bold">※料金が表示されない場合は詳細な住所を目的地に入れてください</p>
+        <%= image_tag "address.webp", alt: "住所で検索", class: "w-full h-auto rounded-lg shadow mt-4" %>
+        <%= image_tag "payment.webp", alt: "料金", class: "w-full h-auto rounded-lg shadow mt-4" %>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide p-6">
+        <h2 class="text-3xl font-bold mb-2">⑤ 周辺施設検索</h2>
+        <p class="text-xl mb-4 font-bold">レストランやレンタルショップを検索できます</p>
+        <%= image_tag "facility.webp", alt: "周辺施設", class: "w-full h-auto rounded-lg shadow" %>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center space-x-6 mt-6">
+    <button class="custom-prevbottom text-3xl font-bold text-gray-700 hover:text-blue-500">
+      <span>◀</span>
+      <span>前へ</span>
+    </button>
+    <button class="custom-nextbottom text-3xl font-bold text-gray-700 hover:text-blue-500">
+      <span>次へ</span>
+      <span>▶</span>
+    </button>
+  </div>
+
+  <div class="mt-6 text-center">
     <%= link_to "トップページへ戻る", root_path, class: "text-blue-600 underline" %>
   </div>
 </div>

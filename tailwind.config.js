@@ -98,6 +98,12 @@ module.exports = {
     'z-40',
     'bottom-12',
     'items-center',
+    'hover:underline',
+    'swiper',
+    'swiper-button-next',
+    'swiper-button-prev',
+    'swiper-slide',
+    'swiper-wrapper',
   ],
   theme: {
     extend: {},

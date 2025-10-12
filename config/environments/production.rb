@@ -100,4 +100,8 @@ Rails.application.configure do
     user_name: "apikey",
     password: ENV["SENDGRID_API_KEY"]
   }
+
+  if defined?(Bullet)
+    Bullet.enable = false
+  end
 end
