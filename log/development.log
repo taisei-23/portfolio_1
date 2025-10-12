@@ -99575,3 +99575,138 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/how_to_use" for 172.18.0.1 at 2025-10-12 09:17:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='App'*/[0m
+Processing by PagesController#how_to_use as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/how_to_use.html.erb within layouts/application
+  Rendered pages/how_to_use.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'a825dce2-efee-4a13-a2af-916e1744855d' ORDER BY "users"."id" ASC LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_header.html.erb:7
+  Rendered shared/_header.html.erb (Duration: 14.7ms | GC: 0.1ms)
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 'a825dce2-efee-4a13-a2af-916e1744855d' AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:7
+  Rendered shared/_sidebar.html.erb (Duration: 12.9ms | GC: 0.1ms)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | GC: 0.4ms)
+Completed 200 OK in 37ms (Views: 25.1ms | ActiveRecord: 6.8ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6IjY4ZWMyNjdmLWFjZjktNGMyMy1hMGE5LWQ5MDQxMWY3YzEzMSIsInB1ciI6ImJsb2JfaWQifX0=--8645ba5bb3733dda45669de53cb777e53a463110/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:17:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6IjY4ZWMyNjdmLWFjZjktNGMyMy1hMGE5LWQ5MDQxMWY3YzEzMSIsInB1ciI6ImJsb2JfaWQifX0=--8645ba5bb3733dda45669de53cb777e53a463110", "filename"=>"RUNTEQ修了証書"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='show',application='App',controller='redirect'*/[0m
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 0mnt6uaaagt7bz7vuu34qr6e99qi (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjIyOjAzLjI5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40504fd47da1b458516531ae6dc59d5acf8f8d14/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjIyOjAzLjI5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40504fd47da1b458516531ae6dc59d5acf8f8d14/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjIyOjAzLjI5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40504fd47da1b458516531ae6dc59d5acf8f8d14/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:17:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"RUNTEQ修了証書"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/how_to_use" for 172.18.0.1 at 2025-10-12 09:32:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#how_to_use as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/how_to_use.html.erb within layouts/application
+  Rendered pages/how_to_use.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'a825dce2-efee-4a13-a2af-916e1744855d' ORDER BY "users"."id" ASC LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_header.html.erb:7
+  Rendered shared/_header.html.erb (Duration: 25.2ms | GC: 9.9ms)
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 'a825dce2-efee-4a13-a2af-916e1744855d' AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:7
+  Rendered shared/_sidebar.html.erb (Duration: 13.6ms | GC: 1.2ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | GC: 12.2ms)
+Completed 200 OK in 49ms (Views: 37.3ms | ActiveRecord: 7.1ms (3 queries, 0 cached) | GC: 12.2ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6IjY4ZWMyNjdmLWFjZjktNGMyMy1hMGE5LWQ5MDQxMWY3YzEzMSIsInB1ciI6ImJsb2JfaWQifX0=--8645ba5bb3733dda45669de53cb777e53a463110/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:32:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6IjY4ZWMyNjdmLWFjZjktNGMyMy1hMGE5LWQ5MDQxMWY3YzEzMSIsInB1ciI6ImJsb2JfaWQifX0=--8645ba5bb3733dda45669de53cb777e53a463110", "filename"=>"RUNTEQ修了証書"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='show',application='App',controller='redirect'*/[0m
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 0mnt6uaaagt7bz7vuu34qr6e99qi (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjM3OjQ1LjU4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e08a31f21d777d2055f0f0a45ba69874f19fa6c5/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjM3OjQ1LjU4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e08a31f21d777d2055f0f0a45ba69874f19fa6c5/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjM3OjQ1LjU4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e08a31f21d777d2055f0f0a45ba69874f19fa6c5/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:32:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"RUNTEQ修了証書"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/how_to_use" for 172.18.0.1 at 2025-10-12 09:38:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#how_to_use as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/how_to_use.html.erb within layouts/application
+  Rendered pages/how_to_use.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'a825dce2-efee-4a13-a2af-916e1744855d' ORDER BY "users"."id" ASC LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_header.html.erb:7
+  Rendered shared/_header.html.erb (Duration: 14.2ms | GC: 0.3ms)
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 'a825dce2-efee-4a13-a2af-916e1744855d' AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:7
+  Rendered shared/_sidebar.html.erb (Duration: 11.2ms | GC: 0.5ms)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | GC: 0.9ms)
+Completed 200 OK in 33ms (Views: 22.1ms | ActiveRecord: 6.8ms (3 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6IjY4ZWMyNjdmLWFjZjktNGMyMy1hMGE5LWQ5MDQxMWY3YzEzMSIsInB1ciI6ImJsb2JfaWQifX0=--8645ba5bb3733dda45669de53cb777e53a463110/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:38:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6IjY4ZWMyNjdmLWFjZjktNGMyMy1hMGE5LWQ5MDQxMWY3YzEzMSIsInB1ciI6ImJsb2JfaWQifX0=--8645ba5bb3733dda45669de53cb777e53a463110", "filename"=>"RUNTEQ修了証書"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='show',application='App',controller='redirect'*/[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 0mnt6uaaagt7bz7vuu34qr6e99qi (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjQzOjU0LjY2NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0a503cd7ec0805f8e37075925affc2c340fe8a4f/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjQzOjU0LjY2NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0a503cd7ec0805f8e37075925affc2c340fe8a4f/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjQzOjU0LjY2NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0a503cd7ec0805f8e37075925affc2c340fe8a4f/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:38:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"RUNTEQ修了証書"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/how_to_use" for 172.18.0.1 at 2025-10-12 09:40:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#how_to_use as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/how_to_use.html.erb within layouts/application
+  Rendered pages/how_to_use.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 'a825dce2-efee-4a13-a2af-916e1744855d' ORDER BY "users"."id" ASC LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_header.html.erb:7
+  Rendered shared/_header.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 'a825dce2-efee-4a13-a2af-916e1744855d' AND "active_storage_attachments"."record_type" = 'User' AND "active_storage_attachments"."name" = 'icon_image' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = '68ec267f-acf9-4c23-a0a9-d90411f7c131' LIMIT 1 /*action='how_to_use',application='App',controller='pages'*/[0m
+  ↳ app/views/shared/_sidebar.html.erb:7
+  Rendered shared/_sidebar.html.erb (Duration: 2.9ms | GC: 0.3ms)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.6ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIwbW50NnVhYWFndDdiejd2dXUzNHFyNmU5OXFpIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiUlVOVEVRJTNGJTNGJTNGJTNGLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ1JVTlRFUSVFNCVCRiVBRSVFNCVCQSU4NiVFOCVBOCVCQyVFNiU5QiVCOC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI1LTEwLTEyVDA5OjQzOjU0LjY2NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0a503cd7ec0805f8e37075925affc2c340fe8a4f/RUNTEQ%E4%BF%AE%E4%BA%86%E8%A8%BC%E6%9B%B8.png" for 172.18.0.1 at 2025-10-12 09:40:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"RUNTEQ修了証書"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
