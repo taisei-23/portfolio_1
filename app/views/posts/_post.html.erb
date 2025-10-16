@@ -1,5 +1,4 @@
-<div class="border rounded p-4 mb-4 shadow-sm hover:shadow-md opacity-0 -translate-x-10 transition transform duration-1500 ease-out"
-     data-controller="slide-in">
+<div class="border rounded p-4 mb-4 shadow-sm hover:shadow-md">
   <div class="flex items-center mb-2 p-2">
     <% if post.user.icon_image.attached? %>
       <%= image_tag url_for(post.user.icon_image), class: "rounded-full mr-2 w-8 h-8", size: "40x40" %>
@@ -18,7 +17,7 @@
   <% end %>
 
   <% if post.image.attached? %>
-    <div class="mb-2">
+    <div class="mb-2 opacity-0 -translate-x-10 transition transform duration-1500 ease-out rounded-lg shadow-md transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl" data-controller="slide-in">
       <%= image_tag post.image, class: "w-full h-auto rounded max-w-full" %>
     </div>
   <% end %>

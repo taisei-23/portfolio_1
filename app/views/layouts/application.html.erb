@@ -20,13 +20,15 @@
     <%= turbo_include_tags %>
   </head>
 
-  <body class="flex flex-col min-h-screen">
-    <div data-controller="sidebar" class="flex flex-col flex-1">
+  <body class="min-h-screen">
+    <div data-controller="sidebar" class="flex flex-col min-h-screen">
       <%= render "shared/header" %>
 
       <div class="flex flex-1 overflow-hidden">
         <% if user_signed_in? %>
-          <%= render "shared/sidebar" %>
+          <div>
+            <%= render "shared/sidebar" %>
+          </div>
         <% end %>
 
         <main class="flex-1 overflow-y-auto bg-white relative flex flex-col">
