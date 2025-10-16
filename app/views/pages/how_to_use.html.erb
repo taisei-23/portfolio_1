@@ -14,11 +14,12 @@
     </button>
   </div>
 
-  <div class="swiper flex-1" data-swiper-target="swiper">
+  <div class="swiper flex-1 px-4" data-swiper-target="swiper">
     <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
-      <div class="swiper-slide p-6">
+      <br>
+      <div class="swiper-slide p-6 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.2),_0_0_10px_rgba(0,0,0,0.1)] transition-all duration-300">
         <h2 class="text-3xl font-bold mb-2">① 掲示板</h2>
         <p class="text-xl mb-4 font-bold">掲示板で投稿やコメントを作成できます</p>
         <p class="text-xl mb-4 font-bold">掲示板では、自分のスノーボード体験や雪山の感想を投稿できます</p>
@@ -29,7 +30,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="swiper-slide p-6">
+      <div class="swiper-slide p-6 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.2),_0_0_10px_rgba(0,0,0,0.1)] transition-all duration-300">
         <h2 class="text-3xl font-bold mb-2">② ブックマーク</h2>
         <p class="text-xl mb-4 font-bold">気に入った投稿に星マークの「ブックマーク」をつけられます</p>
         <%= image_tag "bookmark.webp", alt: "ブックマーク", class: "w-full h-auto rounded-lg shadow" %>
@@ -38,14 +39,14 @@
       </div>
 
       <!-- Slide 3 -->
-      <div class="swiper-slide p-6">
+      <div class="swiper-slide p-6 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.2),_0_0_10px_rgba(0,0,0,0.1)] transition-all duration-300">
         <h2 class="text-3xl font-bold mb-2">③ 雪山検索</h2>
         <p class="text-xl mb-4 font-bold">雪山検索からスキー場を探せます</p>
         <%= image_tag "mount.webp", alt: "雪山", class: "w-full h-auto rounded-lg shadow" %>
       </div>
 
       <!-- Slide 4 -->
-      <div class="swiper-slide p-6">
+      <div class="swiper-slide p-6 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.2),_0_0_10px_rgba(0,0,0,0.1)] transition-all duration-300">
         <h2 class="text-3xl font-bold mb-2">④ 経路検索</h2>
         <p class="text-xl mb-4 font-bold">雪山検索後に経路も検索できます</p>
         <%= image_tag "route.webp", alt: "経路検索", class: "w-full h-auto rounded-lg shadow mb-4" %>
@@ -55,7 +56,7 @@
       </div>
 
       <!-- Slide 5 -->
-      <div class="swiper-slide p-6">
+      <div class="swiper-slide p-6 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.2),_0_0_10px_rgba(0,0,0,0.1)] transition-all duration-300">
         <h2 class="text-3xl font-bold mb-2">⑤ 周辺施設検索</h2>
         <p class="text-xl mb-4 font-bold">レストランやレンタルショップを検索できます</p>
         <%= image_tag "facility.webp", alt: "周辺施設", class: "w-full h-auto rounded-lg shadow" %>
@@ -76,6 +77,6 @@
   </div>
 
   <div class="mt-6 text-center">
-    <%= link_to "トップページへ戻る", root_path, class: "text-blue-600 underline" %>
+    <%= link_to "トップページへ戻る", root_path, class: "text-gray-600 underline hover:text-blue-500" %>
   </div>
 </div>

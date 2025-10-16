@@ -1,7 +1,7 @@
-<div class="p-4 bg-gray-100 rounded mb-4">
-  <%= search_form_for @q, url: search_posts_path, method: :get, html: { class: "flex space-x-2" } do |f| %>
+<div class="p-4 bg-gray-100 rounded mb-4 shadow-md flex justify-center">
+  <%= search_form_for @q, url: search_posts_path, method: :get, html: { class: "flex w-full max-w-xl space-x-2" } do |f| %>
     <%= f.label :title_or_body_cont, "検索", class: "sr-only" %>
-    <div class="relative" data-controller="autocomplete">
+    <div class="relative flex-1" data-controller="autocomplete">
       <%= f.search_field :title_or_body_cont, placeholder: "タイトルや本文を検索",
             class: "border p-2 rounded w-full",
             data: { autocomplete_target: "input", action: "input->autocomplete#search" } %>
@@ -9,6 +9,6 @@
       </ul>
     </div>
 
-    <%= f.submit "検索", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+    <%= f.submit "検索", class: "bg-blue-600 text-white rounded px-3 py-1 hover:bg-blue-500 flex-shrink-0" %>
   <% end %>
 </div>

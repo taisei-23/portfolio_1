@@ -4,5 +4,5 @@
     <%= f.text_area :body, rows: 3, class: "w-80 p-2 border rounded" %>
   </div>
 
-  <%= f.submit comment.persisted? ? "更新する" : "投稿する", class: "bg-blue-600 text-white rounded px-3 py-1" %>
+  <%= f.submit comment.persisted? ? "更新する" : "投稿する", class: "bg-blue-600 text-white rounded px-3 py-1 hover:bg-blue-500 font-bold" %>
 <% end %>

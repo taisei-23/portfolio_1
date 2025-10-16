@@ -1,15 +1,16 @@
 <div data-sidebar-target="sidebar" 
-    class="lg:relative lg:flex lg:w-60 left-0 fixed top-16 w-60 h-[calc(100vh-4rem)] bg-orange-300 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:top-0 z-50">
+    class="lg:relative lg:flex lg:w-60 fixed top-16 w-60 h-[calc(100vh-4rem)] bg-orange-300 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:top-0 z-50">
   <% if user_signed_in? %>
     <div class="mb-6"><br>
-      <div class="flex items-center mb-3">
+      <div class="flex items-center mb-3 px-4">
         <% if current_user.icon_image.attached? %>
-          <%= image_tag url_for(current_user.icon_image), class: "rounded-full mr-2", size: "40x40" %>
+          <%= image_tag url_for(current_user.icon_image), class: "rounded-full mr-2 w-8 h-8", size: "40x40" %>
         <% else %>
           <%= image_tag "default_icon.png", width: 40, height: 40, class: "rounded-full mr-2" %>
         <% end %>
         <span class="font-semibold"><%= current_user.name %></span>
       </div>
+      <br>
       <nav class="space-y-3">
         <button data-action="click->sidebar#toggle" class="flex items-center block lg:hidden p-2 rounded-md focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -17,20 +18,20 @@
           </svg>
           メニューが閉じます
         </button>
-        <%= link_to "　・使い方", how_to_use_path, class: "block hover:text-blue-600" %>
-        <button onclick="document.getElementById('posts-submenu').classList.toggle('hidden')" class="block hover:text-blue-600">
+        <%= link_to "　・使い方", how_to_use_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg ml-4" %>
+        <button onclick="document.getElementById('posts-submenu').classList.toggle('hidden')" class="block hover:bg-gray-100 rounded px-2 py-1 font-semibold w-full text-left p-4 rounded-lg ml-4">
           　・掲示板
         </button>
         <div id="posts-submenu" class="ml-4 space-y-2 hidden text-center">
-          <%= link_to "　掲示板一覧", posts_path, class: "block hover:text-blue-600" %>
-          <%= link_to "　掲示板作成", new_post_path, class: "block hover:text-blue-600" %>
-          <%= link_to "　★ブックマークリスト", bookmarks_posts_path, class: "block hover:text-blue-600" %>
+          <%= link_to "　掲示板一覧", posts_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg w-fit mx-auto" %>
+          <%= link_to "　掲示板作成", new_post_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg w-fit mx-auto" %>
+          <%= link_to "　★ブックマーク", bookmarks_posts_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg w-fit mx-auto" %>
         </div>
 
-        <%= link_to "　・雪山検索", mountain_path, class: "block hover:text-blue-600" %>
-        <%= link_to "　・周辺施設検索", facilities_path, class: "block hover:text-blue-600" %>
-        <%= link_to "　・プロフィール", edit_profile_path, class: "block hover:text-blue-600" %>
-        <%= button_to "　・ログアウト", destroy_user_session_path, method: :delete, class: "block text-red-600 hover:text-red-800", data: { confirm: "本当にログアウトしますか？" }  %>
+        <%= link_to "　・雪山検索", mountain_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg ml-4" %>
+        <%= link_to "　・周辺施設検索", facilities_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg ml-4" %>
+        <%= link_to "　・プロフィール", edit_profile_path, class: "block hover:bg-gray-100 rounded px-2 py-1 font-semibold p-4 rounded-lg ml-4" %>
+        <%= button_to "　・ログアウト", destroy_user_session_path, method: :delete, class: "block text-red-600 hover:bg-red-100 rounded px-2 py-1 font-semibold p-4 rounded-lg ml-4", data: { confirm: "本当にログアウトしますか？" }  %>
       </nav>
     </div>
   <% end %>
