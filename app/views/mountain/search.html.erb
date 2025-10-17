@@ -1,22 +1,22 @@
 <div class="flex h-hull">
   <main class="flex-1 p-6 bg-white">
     <h2 class="text-2xl font-bold mb-6 text-center">雪山検索</h2>
+    <br>
 
-    <div class="flex justify-center items-center mb-8">
-      <%= form_with url: mountain_path, method: :get, local: true do %>
-        <div class="flex flex-col sm:flex-row items-center bg-gray-50 p-4 rounded-lg shadow-md">
-          <label class="font-bold">エリア名（例: 新潟、白馬）：</label>
-          <%= text_field_tag :area, params[:area], class: "border rounded px-2 py-1" %>
-          <%= submit_tag "検索", class: "bg-blue-600 text-white rounded px-3 py-1 hover:bg-blue-500" %>
-        </div>
-      <% end %>
+    <div class="flex justify-center">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md inline-block">
+        <%= form_with url: mountain_path, method: :get, local: true, html: { class: "flex flex-col sm:flex-row items-center space-x-2" } do %>
+          <div class="flex flex-wrap items-center justify-center space-x-2">
+            <label class="font-bold">エリア名（例: 新潟、白馬）：</label>
+            <%= text_field_tag :area, params[:area], class: "border rounded px-2 py-1 w-52" %>
+            <%= submit_tag "検索", class: "bg-blue-600 text-white rounded px-3 py-1 hover:bg-blue-500" %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
     <% if @results.present? %>
-
-
       <div id="map" style="height: 400px;" class="my-4"></div>
-
       <% @results.each do |place| %>
         <div class="border p-2 my-2">
           <strong><%= place.name %></strong><br>

@@ -11,7 +11,11 @@
       <% end %>
     </div>
     <br />
-    <p class="font-bold text-center text-2xl">ユーザー名：<%= @user.name %></p>
+    <div class="flex justify-center">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md inline-block">
+        <p class="font-bold text-center text-2xl">ユーザー名：<%= @user.name %></p>
+      </div>
+    </div>
 
     <br />
     <%= form_with model: @user, url: profile_path, method: :patch, local: true, multipart: true, data: { turbo: false } do |f| %>
