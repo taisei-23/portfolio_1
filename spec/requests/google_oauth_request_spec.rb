@@ -3,6 +3,10 @@ require 'webmock/rspec'
 
 RSpec.describe 'Google認証', type: :request do
   before do
+    Bookmark.delete_all
+    Comment.delete_all
+    Post.delete_all
+    User.delete_all
     OmniAuth.config.test_mode = true
   end
 

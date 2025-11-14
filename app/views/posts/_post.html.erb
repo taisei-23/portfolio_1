@@ -1,7 +1,8 @@
-<div class="border rounded p-4 mb-4 shadow-sm hover:shadow-md transition">
+<div class="border rounded p-4 mb-4 shadow-sm hover:shadow-md opacity-0 -translate-x-10 transition transform duration-1500 ease-out"
+     data-controller="slide-in">
   <div class="flex items-center mb-2 p-2">
     <% if post.user.icon_image.attached? %>
-      <%= image_tag post.user.icon_image.variant(resize_to_limit: [40, 40]), class: "rounded-full mr-2" %>
+      <%= image_tag url_for(post.user.icon_image), class: "rounded-full mr-2", size: "40x40" %>
     <% else %>
       <%= image_tag "default_icon.png", class: "rounded-full mr-2", size: "40x40" %>
     <% end %>
@@ -9,7 +10,7 @@
     <span class="text-gray-500 text-sm ml-2"><%= post.created_at.strftime("%Y/%m/%d %H:%M") %></span>
   </div>
 
-  <% path = user_signed_in? && post.user == current_user ? edit_post_path(post) : post_path(post) %>
+  <% path = post_path(post) %>
 
   <%= link_to path, class: "block text-black hover:underline" do %>
     <h2 class="text-lg font-bold mb-1">タイトル: <%= post.title %></h2>
@@ -18,7 +19,7 @@
 
   <% if post.image.attached? %>
     <div class="mb-2">
-      <%= image_tag post.image.variant(resize_to_limit: [600, nil]), class: "w-full h-auto rounded" %>
+      <%= image_tag post.image, class: "w-full h-auto rounded max-w-full" %>
     </div>
   <% end %>
 
