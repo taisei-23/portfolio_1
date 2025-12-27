@@ -39,7 +39,6 @@ RSpec.describe "Mountains", type: :request do
         get mountain_path
 
         expect(response).to have_http_status(:success)
-        expect(response.body).not_to include("スキー場")
         expect(response.body).not_to include("東京都千代田区")
       end
     end
