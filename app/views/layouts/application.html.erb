@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "App" %></title>
+    <title><%= content_for(:title) || "mountrail" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= display_meta_tags(default_meta_tags) %>
+
     <%= yield :head %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
 
@@ -19,30 +20,33 @@
     <%= turbo_include_tags %>
   </head>
 
-  <body class="min-h-screen flex flex-col h-screen">
-    <%= render "shared/header" %>
+  <body class="flex flex-col min-h-screen">
+    <div data-controller="sidebar" class="flex flex-col flex-1">
+      <%= render "shared/header" %>
 
-    <div class="flex flex-1 overflow-hidden">
-      <% if user_signed_in? %>
-       <%= render "shared/sidebar" %>
-      <% end %>
-
-      <main class="flex-1 overflow-y-auto bg-white relative">
-
-        <% if flash[:notice].present? %>
-          <div class="bg-green-100 text-green-800 p-4 rounded">
-            <%= flash[:notice] %>
-          </div>
+      <div class="flex flex-1 overflow-hidden">
+        <% if user_signed_in? %>
+          <%= render "shared/sidebar" %>
         <% end %>
-        <% if flash[:alert].present? %>
-          <div class="bg-red-100 text-red-800 p-4 rounded">
-            <%= flash[:alert] %>
+
+        <main class="flex-1 overflow-y-auto bg-white relative flex flex-col">
+          <% if flash[:notice].present? %>
+            <div class="bg-green-100 text-green-800 p-4 rounded">
+              <%= flash[:notice] %>
+            </div>
+          <% end %>
+          <% if flash[:alert].present? %>
+            <div class="bg-red-100 text-red-800 p-4 rounded">
+              <%= flash[:alert] %>
+            </div>
+          <% end %>
+          <div class="flex-1">
+            <%= yield %>
           </div>
-        <% end %>
-        <%= yield %>
-      </main>
+        </main>
+      </div>
+
+      <%= render "shared/footer" %>
     </div>
-
-    <%= render "shared/footer" %>
   </body>
 </html>

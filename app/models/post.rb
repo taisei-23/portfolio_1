@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true
 
-  has_one_attached :image
+  has_one_attached :image, dependent: :purge_later
   has_many :comments, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
   has_many :bookmark_users, through: :bookmarks, source: :user

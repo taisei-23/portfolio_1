@@ -4,7 +4,7 @@
   <div class="max-w-2xl mx-auto bg-white p-6">
 
       <% if @user.icon_image.attached? %>
-        <%= image_tag @user.icon_image.variant(resize_to_limit: [150, 150]), class: "mx-auto rounded-full" %>
+        <%= image_tag url_for(@user.icon_image), class: "rounded-full mr-2", size: "40x40" %>
         <p class="mt-2 font-bold"><%= @user.name %></p>
       <% else %>
         <div class="mb-2 font-bold">アイコン未設定</div>
@@ -12,7 +12,7 @@
       <% end %>
 
     <br />
-    <%= form_with model: @user, url: profile_path, method: :patch, local: true, multipart: true do |f| %>
+    <%= form_with model: @user, url: profile_path, method: :patch, local: true, multipart: true, data: { turbo: false } do |f| %>
       <div class="mb-4">
         <%= f.label :name, "新しいユーザー名", class: "font-bold" %><br>
         <%= f.text_field :name, class: "w-full border border-gray-300 rounded p-2" %>
