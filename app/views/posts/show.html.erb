@@ -2,6 +2,10 @@
   <div class="max-w-2xl mx-auto bg-white p-6">
     <%= render @post %>
     <%= render 'comments/form', post: @post, comment: Comment.new %>
+    <br>
+    <% if user_signed_in? && @post.user == current_user %>
+      <%= link_to "編集", edit_post_path(@post), class: "bg-blue-600 text-white rounded px-3 py-1" %>
+    <% end %>
     <div class="mt-4">
       <h2 class="text-lg font-bold mb-2">コメント一覧</h2>
       <% @post.comments.each do |comment| %>

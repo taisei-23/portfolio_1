@@ -18,6 +18,11 @@ gem "image_processing", "~> 1.2"
 
 gem "httparty"
 
+gem "mini_magick"
+gem "meta-tags"
+
+gem "sendgrid-ruby"
+
 gem "dotenv-rails", groups: [ :development, :test ]
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
@@ -74,6 +79,8 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   gem "bullet"
+  gem "letter_opener"
+  gem "letter_opener_web"
 end
 
 group :test do
