@@ -1,6 +1,6 @@
 class CreateMountains < ActiveRecord::Migration[8.0]
   def change
-    create_table :mountains do |t|
+    create_table :mountains, id: :uuid do |t|
       t.string :place_id
       t.string :name
       t.float :latitude

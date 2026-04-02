@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     collection do
       get :search
       get :bookmarks
+      get :autocomplete
     end
 
     resources :comments, only: [ :create, :destroy, :edit, :update ]

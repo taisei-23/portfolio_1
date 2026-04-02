@@ -9,6 +9,7 @@ module.exports = {
     'bg-sky-300',
     'bg-orange-300',
     'bg-blue-600',
+    'bg-red-600',
     'h-full',
     'overflow-hidden',
     'overflow-y-auto',

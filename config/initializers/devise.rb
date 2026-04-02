@@ -12,7 +12,7 @@ Devise.setup do |config|
   OmniAuth.config.allowed_request_methods = [ :post, :get ]
   OmniAuth.config.silence_get_warning = true
 
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  config.mailer_sender = "szktisi13@gmail.com"
 
   require "devise/orm/active_record"
 
